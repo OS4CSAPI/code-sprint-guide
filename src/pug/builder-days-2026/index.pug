@@ -58,9 +58,9 @@ html(lang='en')
                 p.masthead-meta.mb-3
                     | #{new Date(event.startDateTimeISO).toUTCString().slice(0,16)} – #{new Date(event.endDateTimeISO).toUTCString().slice(0,16)} · #{event.eventTimeZoneLabel}
                     br
-                    a.text-white(href=event.venue.mapsUrl, target='_blank', rel='noopener')= `${event.venue.name} — ${event.venue.address}`
+                    a.masthead-venue-link(href=event.venue.mapsUrl, target='_blank', rel='noopener')= `${event.venue.name} — ${event.venue.address}`
                 a.btn.btn-primary.btn-xl.text-uppercase.me-2(href='#csapi-day') See the CSAPI Day
-                a.btn.btn-outline-light.btn-xl.text-uppercase(href=event.links.register, target='_blank', rel='noopener') Register
+                a.btn.btn-dark.btn-xl.text-uppercase(href=event.links.register, target='_blank', rel='noopener') Register
 
         //- Live dashboard (countdown / calendar / time zones)
         include ../includes/dashboard

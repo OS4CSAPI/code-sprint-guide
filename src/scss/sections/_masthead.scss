@@ -29,6 +29,27 @@ header.masthead {
         font-family: $headings-font-family;
     }
 
+    .masthead-meta {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: $black;
+        margin-bottom: 2rem;
+        font-family: $headings-font-family;
+        font-weight: 600;
+    }
+
+    .masthead-venue-link {
+        color: $black;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+
+        &:hover,
+        &:focus {
+            color: darken($primary, 10%);
+        }
+    }
+
 }
 
 @include media-breakpoint-up(md) {
