@@ -1,0 +1,48 @@
+{
+    "title": "OS4CSAPI Code Sprint Guide",
+    "name": "code-sprint-guide",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets && npm run copy:cname",
+        "build:assets": "node scripts/build-assets.js",
+        "build:pug": "node scripts/build-pug.js",
+        "build:scripts": "node scripts/build-scripts.js",
+        "build:scss": "node scripts/build-scss.js",
+        "clean": "node scripts/clean.js",
+        "copy:cname": "node -e \"const fs=require('fs');if(fs.existsSync('CNAME'))fs.copyFileSync('CNAME','dist/CNAME')\"",
+        "start": "npm run build && node scripts/start.js"
+    },
+    "description": "Reusable participation-guide microsite for OGC code sprints and similar events. Hosts per-event pages with live countdown, calendar, and timezone widgets.",
+    "keywords": [
+        "ogc",
+        "code-sprint",
+        "csapi",
+        "connected-systems",
+        "participation-guide"
+    ],
+    "homepage": "https://os4csapi.github.io/code-sprint-guide/",
+    "bugs": {
+        "url": "https://github.com/OS4CSAPI/code-sprint-guide/issues/"
+    },
+    "author": "OS4CSAPI",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OS4CSAPI/code-sprint-guide.git"
+    },
+    "dependencies": {
+        "bootstrap": "5.3.3"
+    },
+    "devDependencies": {
+        "autoprefixer": "10.4.20",
+        "browser-sync": "^3.0.3",
+        "chokidar": "3.6.0",
+        "concurrently": "8.2.2",
+        "postcss": "^8.4.41",
+        "prettier": "2.8.8",
+        "pug": "^3.0.3",
+        "sass": "1.77.8",
+        "shelljs": "^0.8.5",
+        "upath": "2.0.1"
+    }
+}

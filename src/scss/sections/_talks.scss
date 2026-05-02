@@ -1,0 +1,30 @@
+.talk-card {
+    border-left: 4px solid #0d6efd;
+
+    .card-title {
+        line-height: 1.25;
+    }
+
+    details {
+        cursor: pointer;
+
+        summary {
+            list-style: none;
+            user-select: none;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &::before {
+                content: "▸ ";
+                display: inline-block;
+                transition: transform 0.15s;
+            }
+        }
+
+        &[open] summary::before {
+            content: "▾ ";
+        }
+    }
+}

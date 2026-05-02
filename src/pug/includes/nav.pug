@@ -1,0 +1,12 @@
+mixin topNav(homeHref, eventLabel)
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top#mainNav
+        .container
+            a.navbar-brand(href=homeHref) OS4CSAPI Code Sprint Guide
+            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarResponsive.collapse.navbar-collapse
+                ul.navbar-nav.ms-auto
+                    if eventLabel
+                        li.nav-item: span.nav-link.text-white-50= eventLabel
+                    li.nav-item: a.nav-link(href='https://github.com/OS4CSAPI/code-sprint-guide', target='_blank', rel='noopener') GitHub
+                    li.nav-item: a.nav-link(href='https://github.com/OS4CSAPI', target='_blank', rel='noopener') OS4CSAPI org

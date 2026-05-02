@@ -1,0 +1,9 @@
+mixin head(pageTitle, pageDescription, basePath)
+    - var bp = basePath || '';
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content=pageDescription)
+    meta(name='author', content='OS4CSAPI')
+    title= pageTitle
+    link(rel='icon', type='image/x-icon', href=bp + 'assets/favicon.ico')
+    link(href=bp + 'css/styles.css', rel='stylesheet')

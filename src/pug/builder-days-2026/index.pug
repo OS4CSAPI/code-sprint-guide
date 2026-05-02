@@ -1,0 +1,221 @@
+- var event = eventsById['builder-days-2026'];
+include ../includes/head
+include ../includes/nav
+include ../includes/footer
+include ../includes/dashboard
+
+doctype html
+html(lang='en')
+    head
+        +head(`${event.title} — OS4CSAPI Sprint Guide`, `Participation guide for the OGC API – Connected Systems community at the ${event.title}, ${event.venue.name}.`, '../')
+    body#page-top
+        +topNav('../', 'May 2026')
+        main#content
+            +sprintDashboard(event)
+
+            //- 2. What is OS4CSAPI?
+            section.py-5#about
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 What is OS4CSAPI?
+                            p.lead.mb-2
+                                | OS4CSAPI — Open Source for OGC API Connected Systems — is a continuing initiative led from inside the OGC API Connected Systems Standards Working Group that aims to collaborate with open-source projects to advance shared goals around the CSAPI standard.
+                            p.mb-0
+                                | The May 2026 OGC Builder Days Code Sprint is the second event for OS4CSAPI as a community. It is hosted by OGC at Geovation in London, with full hybrid participation over Discord and Microsoft Teams. This guide is OS4CSAPI's central index for the CSAPI track at this sprint.
+
+            //- 3. Why this page exists
+            section.py-5.bg-light#why
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 Why this page exists
+                            p
+                                | This page is an open invitation. If you are working on anything CSAPI-related, in the open, during the timeframe of the sprint — and you would like that work to be visible to the OGC community at the event — then this guide is for you, and you are an OS4CSAPI participant for this sprint. There is no formal membership and no required hours.
+                            p.mb-0
+                                | The page collects the practical things you need: when and where, who else is participating, what we are collectively trying to achieve, and how to share what you are working on so that it shows up in the daily brief-backs and the OGC wrap-up.
+
+            //- 4. The CSAPI Day (Day 3)
+            section.py-5#csapi-day
+                .container
+                    .row.justify-content-center
+                        .col-lg-10
+                            h2.mb-1 The CSAPI Day
+                            p.text-muted.mb-4= event.csapiDay.label
+                            p.mb-4
+                                | OS4CSAPI participants have four 30-minute talks scheduled back-to-back on the final day of the sprint. Together, this is effectively a CSAPI afternoon inside OGC Builder Days.
+                            .row.g-3
+                                each talk in event.csapiDay.talks
+                                    .col-md-6
+                                        .card.h-100.talk-card
+                                            .card-body
+                                                p.text-muted.small.mb-1= talk.time
+                                                h3.h5.card-title.mb-1= talk.title
+                                                p.small.mb-2
+                                                    strong= talk.speaker
+                                                    | , #{talk.affiliation}
+                                                p.mb-2= talk.summary
+                                                details
+                                                    summary.small.text-primary Read the full abstract
+                                                    p.small.text-muted.mt-2.mb-0= talk.abstract
+
+            //- 5. Sprint Goals
+            section.py-5.bg-light#goals
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 OS4CSAPI Sprint Goals
+                            p
+                                | These are the open-ended goals OS4CSAPI is working toward at this sprint. They are deliberately broad — pick whichever ones overlap with what you are already doing, and tell us about it.
+                            ol
+                                each goal in event.sprintGoals
+                                    li.mb-2= goal
+                            p.small.mb-0
+                                | Goal 6 tracks the official spec repository at 
+                                a(href=event.links.csapiSpecRepo, target='_blank', rel='noopener')= event.links.csapiSpecRepo
+                                | .
+
+            //- 6. Implementations of interest
+            section.py-5#implementations
+                .container
+                    .row.justify-content-center
+                        .col-lg-10
+                            h2.mb-3 Implementations of interest
+                            p.text-muted
+                                | Open-source CSAPI projects represented in the OS4CSAPI community at this sprint. If yours is missing, send it to Sam or open a PR on this repo.
+                            .row.g-4
+                                .col-md-6
+                                    h3.h5 Servers
+                                    ul.list-unstyled
+                                        each impl in event.implementations.servers
+                                            li.mb-2
+                                                a(href=impl.url, target='_blank', rel='noopener')= impl.name
+                                                br
+                                                span.text-muted.small= impl.people
+                                .col-md-6
+                                    h3.h5 Clients &amp; libraries
+                                    ul.list-unstyled
+                                        each impl in event.implementations.clients
+                                            li.mb-2
+                                                a(href=impl.url, target='_blank', rel='noopener')= impl.name
+                                                br
+                                                span.text-muted.small= impl.people
+
+            //- 7. How to participate
+            section.py-5.bg-light#participate
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 How to participate
+                            ol
+                                li.mb-2
+                                    | Register (free) on the official 
+                                    a(href=event.links.register, target='_blank', rel='noopener') OGC event page
+                                    | .
+                                li.mb-2
+                                    | Join the 
+                                    a(href=event.links.discord, target='_blank', rel='noopener') OGC events Discord
+                                    |  (or use the 
+                                    a(href=event.links.matrix, target='_blank', rel='noopener') Matrix bridge
+                                    | ).
+                                li.mb-2
+                                    | Tell OGC and the broader sprint community what you are working on by commenting on 
+                                    a(href=event.links.issue181, target='_blank', rel='noopener') developer-events issue #181
+                                    |  — see the section below for context and a suggested template.
+                                li.mb-2
+                                    | Drop daily notes about your CSAPI work in the 
+                                    a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions space
+                                    |  so it can be aggregated for the daily brief-backs.
+                                li.mb-2 Work the hours that make sense for you. Hybrid is fully supported; in-person attendance is not required.
+                                li.mb-0 If you would rather not post publicly, send your update to Sam (Discord, email, call, mail) and he will represent your work to the sprint.
+
+            //- 7b. About issue #181
+            section.py-5#issue-181
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 The "what is everybody working on" thread
+                            p
+                                | OGC has opened a public GitHub thread, 
+                                a(href=event.links.issue181, target='_blank', rel='noopener') opengeospatial/developer-events#181
+                                | , inviting every sprint participant to post a comment describing what they plan to work on. It is the most visible single channel for getting your work onto OGC's radar before the sprint starts, and it is read by the organizers, mentors, and other tracks.
+                            p
+                                | At the moment, the CSAPI community is underrepresented on that thread. If you are happy to post directly, please do — a single short paragraph is enough. If you would prefer not to post yourself, send the same paragraph to Sam (any channel) and it will be posted on your behalf with a clear attribution.
+                            p.mb-2 A simple template you can adapt:
+                            blockquote.blockquote
+                                p.small.mb-0.fst-italic
+                                    | I will be working on [project / repo] during the May 2026 sprint as part of the OS4CSAPI community. My focus is [Pub/Sub, Binary, conformance tests, ETL, sample data, server, client, docs — pick what fits]. If anyone is interested in [collaborating on / testing / reviewing] this, please reach out on Discord or in the OS4CSAPI Discussions space.
+
+            //- 8. Before / During / After
+            section.py-5.bg-light#timeline
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 Before, during, and after
+                            .row.g-3
+                                .col-md-4
+                                    h3.h6 Before
+                                    ul.small
+                                        li Register on the OGC event page.
+                                        li Join the OGC events Discord.
+                                        li Post on issue #181 (or send to Sam).
+                                        li Skim the agenda; flag any sessions you want to join live.
+                                .col-md-4
+                                    h3.h6 During
+                                    ul.small
+                                        li Drop a daily note in OS4CSAPI Discussions.
+                                        li Engage on Discord — at minimum, lurk in #connected-systems.
+                                        li Day 3: attend the four CSAPI talks (live or via Teams).
+                                .col-md-4
+                                    h3.h6 After
+                                    ul.small
+                                        li Share your wrap-up note (what you did, what worked, what didn't).
+                                        li Mark the OS4CSAPI repos you contributed to in your note.
+                                        li Suggest improvements for the next sprint.
+
+            //- 9. Logistics
+            section.py-5#logistics
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 Logistics
+                            dl.row.small
+                                dt.col-sm-3 Venue
+                                dd.col-sm-9
+                                    a(href=event.venue.mapsUrl, target='_blank', rel='noopener')= event.venue.address
+                                dt.col-sm-3 Microsoft Teams
+                                dd.col-sm-9
+                                    a(href=event.links.teams, target='_blank', rel='noopener') Join the meeting
+                                    |  &middot; Meeting ID: 291 891 040 830 07 &middot; Passcode: eE7Zb7bh
+                                dt.col-sm-3 Discord
+                                dd.col-sm-9
+                                    a(href=event.links.discord, target='_blank', rel='noopener')= event.links.discord
+                                dt.col-sm-3 Matrix
+                                dd.col-sm-9
+                                    a(href=event.links.matrix, target='_blank', rel='noopener')= event.links.matrix
+                                dt.col-sm-3 Wiki
+                                dd.col-sm-9
+                                    a(href=event.links.wiki, target='_blank', rel='noopener')= event.links.wiki
+                                dt.col-sm-3 Registration
+                                dd.col-sm-9
+                                    a(href=event.links.register, target='_blank', rel='noopener')= event.links.register
+                                dt.col-sm-3 Hotels
+                                dd.col-sm-9
+                                    | See the 
+                                    a(href=event.links.wiki + '#period-and-location', target='_blank', rel='noopener') Period and Location
+                                    |  section of the OGC wiki for recommended hotels and transit notes.
+
+            //- 10. Contact / liaison
+            section.py-5.bg-dark.text-white#contact
+                .container
+                    .row.justify-content-center
+                        .col-lg-9
+                            h2.mb-3 Contact &amp; liaison
+                            p
+                                | Sam Bolling (Riverside Research) is the OS4CSAPI liaison for this sprint. Any update — whether you want it forwarded to OGC, posted on issue #181, or just acknowledged privately — can go through him.
+                            p.mb-0
+                                | Easiest channels: OGC events Discord, OS4CSAPI Discussions, or email. If you would like to be added to a future OS4CSAPI mailing list, drop a note in Discussions.
+
+        +siteFooter()
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', crossorigin='anonymous')
+        script(src='../js/scripts.js')
