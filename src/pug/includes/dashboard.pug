@@ -1,41 +1,37 @@
 mixin sprintDashboard(event)
-    section.sprint-hero
+    section.sprint-dashboard.page-section.bg-light#dashboard
         .container
-            .text-center.mb-4
-                h1.display-5.mb-2= event.title
-                p.lead.text-muted.mb-1= event.subtitle
-                p.text-muted.mb-0
-                    | #{event.venue.name} &middot; 
-                    a(href=event.venue.mapsUrl, target='_blank', rel='noopener')= event.venue.address
-                p.text-muted.small.mb-0
-                    | #{new Date(event.startDateTimeISO).toUTCString().slice(0,16)} – #{new Date(event.endDateTimeISO).toUTCString().slice(0,16)} &middot; #{event.eventTimeZoneLabel}
-            .row.g-3
-                .col-md-6
-                    .card.h-100
-                        .card-body
-                            h3.h5.card-title Countdown to Day 1
+            .row.g-4
+                .col-lg-4
+                    .card.dashboard-card.h-100
+                        .card-body.text-center
+                            .dashboard-icon
+                                i.fas.fa-hourglass-half
+                            h3.dashboard-card-title.text-uppercase Countdown
                             #countdown.countdown-display Loading…
-                            p.text-muted.small.mb-0
-                                | Counting down to 09:00 #{event.eventTimeZoneLabel} on Day 1.
-                .col-md-6
-                    .card.h-100
+                            p.dashboard-note.mb-0 Counting down to 09:00 #{event.eventTimeZoneLabel} on Day 1.
+                .col-lg-4
+                    .card.dashboard-card.h-100
                         .card-body
-                            h3.h5.card-title May 2026 Calendar
+                            .dashboard-icon.text-center
+                                i.fas.fa-calendar-alt
+                            h3.dashboard-card-title.text-uppercase.text-center May 2026
                             #calendar.calendar-host Loading…
-                            p.text-muted.small.mb-0.mt-2
+                            p.dashboard-note.mb-0.text-center.mt-2
                                 | Sprint days are highlighted. Today is outlined.
-                .col-12
-                    .card
+                .col-lg-4
+                    .card.dashboard-card.h-100
                         .card-body
-                            h3.h5.card-title Time-Zone Reference
-                            .table-responsive
+                            .dashboard-icon.text-center
+                                i.fas.fa-globe
+                            h3.dashboard-card-title.text-uppercase.text-center Time Zones
+                            .table-responsive.timezone-host
                                 table.table.table-sm.mb-0#timezone-table
                                     thead
                                         tr
                                             th Location
-                                            th Time zone
-                                            th Local time now
-                                            th Offset from London
+                                            th.text-end Local
+                                            th.text-end vs. London
                                     tbody
             script.
                 window.SPRINT_EVENT = !{JSON.stringify(event)};

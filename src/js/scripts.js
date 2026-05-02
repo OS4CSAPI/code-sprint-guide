@@ -111,17 +111,18 @@
         (event.timeZones || []).forEach(function (z) {
             var tr = document.createElement('tr');
             var offset = getOffsetMinutes(now, z.iana) - londonOffset;
-            var offsetText;
-            if (offset === 0) offsetText = 'Same as London';
-            else {
+            var offsetText, offsetClass = 'tz-offset';
+            if (offset === 0) {
+                offsetText = 'same';
+                offsetClass += ' same';
+            } else {
                 var hh = offset / 60;
                 offsetText = (hh > 0 ? '+' : '') + hh + ' h';
             }
             tr.innerHTML =
                 '<td>' + z.label + '</td>' +
-                '<td><code class="small">' + z.iana + '</code></td>' +
                 '<td class="local-time" data-tz="' + z.iana + '">' + formatLocalTime(now, z.iana) + '</td>' +
-                '<td>' + offsetText + '</td>';
+                '<td class="' + offsetClass + '">' + offsetText + '</td>';
             tbody.appendChild(tr);
             rows.push(tr);
         });

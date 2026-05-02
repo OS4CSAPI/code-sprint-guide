@@ -1,21 +1,29 @@
+//
+// Styles — OS4CSAPI Code Sprint Guide
+// Built on the Start Bootstrap "Agency" theme used by ogc-csapi-website.
+//
+
+// Variables
+@import "./variables.scss";
+
 // Bootstrap
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap.scss";
 
-// Site
-@import "sections/sprint-hero";
-@import "sections/talks";
+// Global / theme
+@import "./global.scss";
 
-body {
-    padding-top: 70px; // fixed nav
-}
+// Components
+@import "./components/buttons.scss";
+@import "./components/navbar.scss";
 
-#mainNav {
-    .navbar-brand {
-        font-weight: 600;
-        letter-spacing: 0.02em;
-    }
-}
+// Sections (theme)
+@import "./sections/masthead.scss";
+@import "./sections/portfolio.scss";
+@import "./sections/timeline.scss";
+@import "./sections/team.scss";
+@import "./sections/contact.scss";
+@import "./sections/footer.scss";
 
-section[id] {
-    scroll-margin-top: 80px;
-}
+// Sections (this site)
+@import "./sections/sprint-hero.scss";
+@import "./sections/talks.scss";

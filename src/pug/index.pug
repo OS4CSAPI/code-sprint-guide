@@ -1,42 +1,77 @@
-include includes/head
-include includes/nav
-include includes/footer
-
 doctype html
 html(lang='en')
     head
-        +head('OS4CSAPI Code Sprint Guide', 'Reusable participation-guide microsite for OGC code sprints. OS4CSAPI hosts the CSAPI community at the events.', '')
-    body#page-top
-        +topNav('./')
-        main#content
-            section.py-5
-                .container
-                    .row.justify-content-center
-                        .col-lg-9
-                            h1.display-5.mb-3 OS4CSAPI Code Sprint Guide
-                            p.lead
-                                | A reusable participation-guide microsite for OGC code sprints and similar events. Each event gets its own page with a live countdown, a calendar that highlights the sprint days and today, a multi-zone clock, and the practical information CSAPI participants need to engage.
-                            p
-                                | OS4CSAPI — Open Source for OGC API Connected Systems — uses these guides to issue an open invitation to the CSAPI community: if you are working on CSAPI in the open during a sprint, you are an OS4CSAPI participant for that sprint. No formal membership; no required hours.
-                            h2.h4.mt-5.mb-3 Upcoming &amp; current events
-                            .row.g-3
-                                each ev in events
-                                    .col-md-8
-                                        .card
-                                            .card-body
-                                                h3.h5.card-title
-                                                    a(href=`${ev.id}/`)= ev.title
-                                                p.text-muted.small.mb-2= ev.subtitle
-                                                p.small.mb-2
-                                                    | #{ev.venue.name} &middot; #{ev.eventTimeZoneLabel}
-                                                p.small.text-muted.mb-0
-                                                    | #{new Date(ev.startDateTimeISO).toUTCString().slice(0,16)} – #{new Date(ev.endDateTimeISO).toUTCString().slice(0,16)}
-                                                a.btn.btn-primary.btn-sm.mt-3(href=`${ev.id}/`) Open event guide →
-                            p.text-muted.small.mt-4.mb-0
-                                | This site is open source. Contribute, fork, or adapt for your own sprint:
-                                |  
-                                a(href='https://github.com/OS4CSAPI/code-sprint-guide', target='_blank', rel='noopener') OS4CSAPI/code-sprint-guide
-                                | .
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Reusable participation-guide microsite for OGC code sprints. OS4CSAPI hosts the CSAPI community at the events.')
+        meta(name='author', content='OS4CSAPI')
 
-        +siteFooter()
+        title OS4CSAPI Code Sprint Guide
+
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='shortcut icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='icon', type='image/png', sizes='192x192', href='assets/img/logos/os4csapi.png')
+        link(rel='apple-touch-icon', href='assets/img/logos/os4csapi.png')
+
+        script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+
+        link(href='css/styles.css', rel='stylesheet')
+
+    body#page-top
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand(href='#page-top') OS4CSAPI · Sprint Guide
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
+                        li.nav-item: a.nav-link(href='#events') Events
+                        li.nav-item: a.nav-link(href='https://github.com/OS4CSAPI', target='_blank', rel='noopener') OS4CSAPI
+
+        header.masthead
+            .container
+                .masthead-heading.text-uppercase OS4CSAPI Code Sprint Guide
+                .masthead-subheading An open invitation to the CSAPI community at every OGC sprint.
+                a.btn.btn-primary.btn-xl.text-uppercase(href='#events') See current events
+
+        section.page-section#events
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Current &amp; Upcoming Events
+                    h3.section-subheading.text-muted One participation guide per sprint. Live countdown, calendar, time zones, and the practical details.
+                .row.g-4.justify-content-center
+                    each ev in events
+                        .col-md-7
+                            .card.shadow-sm.h-100
+                                .card-body
+                                    h4.text-uppercase.mb-2
+                                        a(href=`${ev.id}/`)= ev.title
+                                    p.text-muted.fst-italic.mb-3= ev.subtitle
+                                    p.small.mb-1
+                                        i.fas.fa-map-marker-alt.text-primary.me-2
+                                        | #{ev.venue.name} · #{ev.eventTimeZoneLabel}
+                                    p.small.text-muted.mb-3
+                                        i.fas.fa-calendar.text-primary.me-2
+                                        | #{new Date(ev.startDateTimeISO).toUTCString().slice(0,16)} – #{new Date(ev.endDateTimeISO).toUTCString().slice(0,16)}
+                                    a.btn.btn-primary.btn-sm.text-uppercase(href=`${ev.id}/`) Open guide
+
+        section.page-section.bg-light#about
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase About OS4CSAPI
+                    h3.section-subheading.text-muted Open Source for OGC API – Connected Systems.
+                .row.justify-content-center
+                    .col-lg-9
+                        p.text-center
+                            | OS4CSAPI is a continuing initiative led from inside the OGC API Connected Systems Standards Working Group that aims to collaborate with open-source projects to advance shared goals around the CSAPI standard. These sprint guides are how we issue an open invitation: if you are working on CSAPI in the open during a sprint, you are an OS4CSAPI participant for that sprint. No formal membership; no required hours.
+
+        footer.footer.py-4
+            .container
+                .row.align-items-center
+                    .col-md-6.text-lg-start
+                        | © OS4CSAPI 2026
+                    .col-md-6.text-lg-end
+                        a.link-light.me-3(href='https://github.com/OS4CSAPI', target='_blank', rel='noopener') OS4CSAPI org
+                        a.link-light(href='https://github.com/OS4CSAPI/code-sprint-guide', target='_blank', rel='noopener') Source
+
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', crossorigin='anonymous')

@@ -1,37 +1,53 @@
-.sprint-hero {
-    background: linear-gradient(135deg, #0b1d3a 0%, #1a3a6e 100%);
-    color: #fff;
-    padding: 3rem 0 2.5rem;
+//
+// Sprint dashboard styling — masthead-aligned dashboard cards plus widget
+// internals (countdown, calendar, timezone table).
+//
 
-    h1, h2, h3, p {
-        color: #fff;
-    }
+.sprint-dashboard {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
 
-    .text-muted {
-        color: rgba(255, 255, 255, 0.75) !important;
-    }
+.dashboard-card {
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: $white;
 
-    .card {
-        background: rgba(255, 255, 255, 0.97);
-        color: #212529;
-        border: none;
-
-        .text-muted {
-            color: #6c757d !important;
-        }
-
-        h3, h2 {
-            color: #0b1d3a;
-        }
+    .card-body {
+        padding: 2rem 1.75rem;
     }
 }
 
+.dashboard-icon {
+    color: $primary;
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.dashboard-card-title {
+    font-family: $headings-font-family;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    color: $secondary;
+    margin-bottom: 1rem;
+}
+
+.dashboard-note {
+    color: $text-muted;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
 .countdown-display {
+    text-align: center;
+    font-family: $headings-font-family;
     font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 0.5rem 0 0.75rem;
-    letter-spacing: 0.01em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0.25rem 0 1rem;
+    color: $secondary;
 
     .cd-num {
         display: inline-block;
@@ -39,12 +55,14 @@
         text-align: right;
         font-variant-numeric: tabular-nums;
     }
+
     .cd-lbl {
         font-size: 0.85rem;
-        color: #6c757d;
+        color: $text-muted;
         margin-left: 0.05em;
         margin-right: 0.45em;
         font-weight: 400;
+        font-family: $font-family-base;
     }
 }
 
@@ -57,58 +75,89 @@
     grid-template-columns: repeat(7, 1fr);
     gap: 0.3rem;
     font-size: 0.85rem;
+    font-family: $headings-font-family;
 }
 
 .calendar-header {
     text-align: center;
-    font-weight: 600;
-    color: #6c757d;
+    font-weight: 700;
+    color: $text-muted;
     padding: 0.25rem 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
 }
 
 .calendar-cell {
     aspect-ratio: 1 / 1;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
+    border: 1px solid $border-color;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-variant-numeric: tabular-nums;
+    color: $secondary;
+    font-weight: 500;
 
     &.empty {
         border: none;
     }
 
     &.sprint-day {
-        border: 2px solid #0d6efd;
-        background: #e7f1ff;
+        border: 2px solid $primary;
+        background: rgba($primary, 0.12);
+        color: darken($primary, 18%);
         font-weight: 700;
-        color: #0b1d3a;
     }
 
     &.today {
-        outline: 3px solid #ffc107;
+        outline: 3px solid $warning;
         outline-offset: -3px;
     }
 }
 
 #timezone-table {
-    code {
-        background: transparent;
-        padding: 0;
-        color: #6c757d;
+    font-size: 0.85rem;
+
+    thead th {
+        font-family: $headings-font-family;
+        font-size: 0.7rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $text-muted;
+        border-bottom: 2px solid $border-color;
+        padding: 0.4rem 0.5rem;
+    }
+
+    tbody td {
+        padding: 0.5rem 0.5rem;
+        border-bottom: 1px solid $border-color;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
     }
 
     .local-time {
         font-variant-numeric: tabular-nums;
+        text-align: right;
+    }
+
+    .tz-offset {
+        text-align: right;
+        color: $text-muted;
+    }
+
+    .tz-offset.same {
+        color: $primary;
+        font-weight: 600;
     }
 }
 
 @media (max-width: 575.98px) {
     .countdown-display {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
     .calendar-grid {
-        font-size: 0.75rem;
+        font-size: 0.78rem;
     }
 }
