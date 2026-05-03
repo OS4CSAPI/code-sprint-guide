@@ -46,11 +46,12 @@ html(lang='en')
                         li.nav-item: a.nav-link(href='#participate') Participate
                         li.nav-item: a.nav-link(href='#register') Register
                         li.nav-item: a.nav-link(href='#goals') Goals
-                        li.nav-item: a.nav-link(href='#talks') Talks
                         li.nav-item: a.nav-link(href='#daily-reporting') Daily Reports
+                        li.nav-item: a.nav-link(href='#talks') Talks
                         li.nav-item: a.nav-link(href='#implementations') Repos
                         li.nav-item: a.nav-link(href='#logistics') Quick Links
                         li.nav-item: a.nav-link(href='#useful-links') CSAPI Links
+                        li.nav-item: a.nav-link(href='#about') About
 
         //- Masthead
         header.masthead
@@ -71,7 +72,7 @@ html(lang='en')
         +sprintDashboard(event)
 
         //- How to participate
-        section.page-section.bg-light#participate
+        section.page-section#participate
             .container
                 .text-center
                     h2.section-heading.text-uppercase How to Participate
@@ -133,7 +134,7 @@ html(lang='en')
                                 |  OS4CSAPI members are giving across the three sprint days. Bringing an audience helps signal interest in CSAPI to the wider OGC community.
 
         //- Registration
-        section.page-section#register
+        section.page-section.bg-light#register
             .container
                 .text-center
                     h2.section-heading.text-uppercase Registration
@@ -151,7 +152,7 @@ html(lang='en')
                             |  so you can find the #connected-systems channel before day one.
 
         //- Sprint Goals
-        section.page-section.bg-light#goals
+        section.page-section#goals
             .container
                 .text-center
                     h2.section-heading.text-uppercase Sprint Goals
@@ -167,7 +168,7 @@ html(lang='en')
                             | .
 
         //- Issue #181 detail
-        section.page-section#issue-181
+        section.page-section.bg-light#issue-181
             .container
                 .text-center
                     h2.section-heading.text-uppercase About Issue #181
@@ -185,7 +186,7 @@ html(lang='en')
                                     | I will be working on [project / repo] during the May 2026 sprint as part of the OS4CSAPI community. My focus is [Pub/Sub, Binary, conformance tests, ETL, sample data, server, client, docs — pick what fits]. If anyone is interested in [collaborating on / testing / reviewing] this, please reach out on Discord or in the OS4CSAPI Discussions space.
 
         //- Daily participation reporting
-        section.page-section.bg-light#daily-reporting
+        section.page-section#daily-reporting
             .container
                 .text-center
                     h2.section-heading.text-uppercase Daily Participation Reporting
@@ -203,7 +204,7 @@ html(lang='en')
                                     | Day [1 / 2 / 3] — [your name / project]. Today: [what you got done]. Blockers: [anything stuck, or "none"]. Next: [what you're picking up tomorrow / after the sprint]. Looking for: [reviewers / testers / collaborators / nothing].
 
         //- OS4CSAPI talks during the sprint
-        section.page-section#talks
+        section.page-section.bg-light#talks
             .container
                 .text-center
                     h2.section-heading.text-uppercase CSAPI Talks at the Sprint
@@ -235,7 +236,7 @@ html(lang='en')
                                         p.talk-abstract.mb-0= talk.abstract
 
         //- Repositories of interest
-        section.page-section.bg-light#implementations
+        section.page-section#implementations
             .container
                 .text-center
                     h2.section-heading.text-uppercase Repositories of Interest
@@ -297,7 +298,7 @@ html(lang='en')
                                                         a.impl-handle(href=person.url, target='_blank', rel='noopener')= '@' + person.handle
 
         //- Quick Participation Links (formerly Logistics)
-        section.page-section#logistics
+        section.page-section.bg-light#logistics
             .container
                 .text-center
                     h2.section-heading.text-uppercase Quick Participation Links
@@ -357,7 +358,7 @@ html(lang='en')
                                             |  &middot; #{link.note}
 
         //- About OS4CSAPI / Why this page
-        section.page-section#about
+        section.page-section.bg-light#about
             .container
                 .text-center
                     h2.section-heading.text-uppercase About OS4CSAPI
