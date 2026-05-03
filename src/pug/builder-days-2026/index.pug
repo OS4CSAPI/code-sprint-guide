@@ -340,24 +340,21 @@ html(lang='en')
                                 a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
 
         //- Useful CSAPI Links
-        section.page-section.bg-light.useful-links-section#useful-links
+        section.page-section#useful-links
             .container
                 .text-center
                     h2.section-heading.text-uppercase Useful CSAPI Links
                     h3.section-subheading.text-muted Specs and reference material for getting up to speed on CSAPI.
                 .row.justify-content-center
-                    .col-lg-10
-                        .useful-links-grid
+                    .col-lg-9
+                        dl.row.mb-0
                             each group in event.usefulLinks
-                                .useful-links-group
-                                    h4.useful-links-group__title= group.category
-                                    ul.useful-links-list
-                                        each link in group.links
-                                            li
-                                                a.useful-link(href=link.url, target='_blank', rel='noopener')
-                                                    span.useful-link__name= link.name
-                                                    if link.tag
-                                                        span.useful-link__tag= link.tag
+                                each link in group.links
+                                    dt.col-sm-3.text-uppercase= link.tag || group.category
+                                    dd.col-sm-9
+                                        a(href=link.url, target='_blank', rel='noopener')= link.name
+                                        if link.note
+                                            |  &middot; #{link.note}
 
         //- About OS4CSAPI / Why this page
         section.page-section#about
