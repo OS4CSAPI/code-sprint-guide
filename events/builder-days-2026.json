@@ -28,22 +28,24 @@
     "usefulLinks": [
         {
             "category": "CSAPI Standard",
+            "icon": "fa-book",
             "links": [
-                { "name": "OGC API – Connected Systems – Part 1: Feature Resources (OGC 23-001)", "url": "https://docs.ogc.org/is/23-001/23-001.html", "note": "Approved Implementation Standard — Systems, Deployments, Procedures, Sampling Features, Properties." },
-                { "name": "OGC API – Connected Systems – Part 2: Dynamic Data (OGC 23-002)", "url": "https://docs.ogc.org/is/23-002/23-002.html", "note": "Approved Implementation Standard — DataStreams, Observations, Control Streams, Commands." },
-                { "name": "Part 1 OpenAPI bundle (YAML, OAS 3.1)", "url": "https://github.com/OS4CSAPI/ogc-client-CSAPI_2/blob/main/docs/research/standards/ogcapi-connectedsystems-1.bundled.oas31.yaml", "note": "Machine-readable Part 1 endpoint and schema definitions (all $refs resolved)." },
-                { "name": "Part 2 OpenAPI bundle (YAML, OAS 3.1)", "url": "https://github.com/OS4CSAPI/ogc-client-CSAPI_2/blob/main/docs/research/standards/ogcapi-connectedsystems-2.bundled.oas31.yaml", "note": "Machine-readable Part 2 endpoint and schema definitions (all $refs resolved)." },
-                { "name": "OGC API – Connected Systems Reviewer's Guide (OGC 23-053r1)", "url": "https://docs.ogc.org/guides/23-053r1/pdf", "note": "Official OGC reviewer's guide (PDF)." },
-                { "name": "OGC API – Connected Systems – v1.0 publication announcement", "url": "https://www.ogc.org/announcement/ogc-announces-publication-of-ogc-api-connected-systems-and-updates-to-supporting-standards/", "note": "Announcement of v1.0 and supporting-standard updates." },
-                { "name": "CSAPI standard repo (opengeospatial/ogcapi-connected-systems)", "url": "https://github.com/opengeospatial/ogcapi-connected-systems", "note": "Public repository for the Connected Systems SWG." },
-                { "name": "OS4CSAPI CSAPI developer page", "url": "https://os4csapi.github.io/ogc-csapi-website/", "note": "CSAPI developer page — overview of CSAPI and the open-source ecosystem." }
+                { "name": "OGC API – Connected Systems – Part 1: Feature Resources (OGC 23-001)", "url": "https://docs.ogc.org/is/23-001/23-001.html", "note": "Approved Implementation Standard — Systems, Deployments, Procedures, Sampling Features, Properties.", "tag": "Spec", "icon": "fa-file-alt" },
+                { "name": "OGC API – Connected Systems – Part 2: Dynamic Data (OGC 23-002)", "url": "https://docs.ogc.org/is/23-002/23-002.html", "note": "Approved Implementation Standard — DataStreams, Observations, Control Streams, Commands.", "tag": "Spec", "icon": "fa-file-alt" },
+                { "name": "Part 1 OpenAPI bundle (YAML, OAS 3.1)", "url": "https://github.com/OS4CSAPI/ogc-client-CSAPI_2/blob/main/docs/research/standards/ogcapi-connectedsystems-1.bundled.oas31.yaml", "note": "Machine-readable Part 1 endpoint and schema definitions (all $refs resolved).", "tag": "OpenAPI", "icon": "fa-code" },
+                { "name": "Part 2 OpenAPI bundle (YAML, OAS 3.1)", "url": "https://github.com/OS4CSAPI/ogc-client-CSAPI_2/blob/main/docs/research/standards/ogcapi-connectedsystems-2.bundled.oas31.yaml", "note": "Machine-readable Part 2 endpoint and schema definitions (all $refs resolved).", "tag": "OpenAPI", "icon": "fa-code" },
+                { "name": "OGC API – Connected Systems Reviewer's Guide (OGC 23-053r1)", "url": "https://docs.ogc.org/guides/23-053r1/pdf", "note": "Official OGC reviewer's guide (PDF).", "tag": "Guide", "icon": "fa-file-pdf" },
+                { "name": "OGC API – Connected Systems – v1.0 publication announcement", "url": "https://www.ogc.org/announcement/ogc-announces-publication-of-ogc-api-connected-systems-and-updates-to-supporting-standards/", "note": "Announcement of v1.0 and supporting-standard updates.", "tag": "News", "icon": "fa-bullhorn" },
+                { "name": "CSAPI standard repo (opengeospatial/ogcapi-connected-systems)", "url": "https://github.com/opengeospatial/ogcapi-connected-systems", "note": "Public repository for the Connected Systems SWG.", "tag": "Repo", "icon": "fa-github", "iconStyle": "fab" },
+                { "name": "OS4CSAPI CSAPI developer page", "url": "https://os4csapi.github.io/ogc-csapi-website/", "note": "CSAPI developer page — overview of CSAPI and the open-source ecosystem.", "tag": "Site", "icon": "fa-globe" }
             ]
         },
         {
             "category": "OGC Connected Systems SWG (Agora)",
+            "icon": "fa-comments",
             "links": [
-                { "name": "Connected Systems SWG — General", "url": "https://agora.ogc.org/c/overview-716694/", "note": "SWG space on OGC Agora." },
-                { "name": "Connected Systems SWG — Events", "url": "https://agora.ogc.org/c/events-connected-systems-swg/", "note": "SWG events feed on OGC Agora." }
+                { "name": "Connected Systems SWG — General", "url": "https://agora.ogc.org/c/overview-716694/", "note": "SWG space on OGC Agora.", "tag": "Forum", "icon": "fa-users" },
+                { "name": "Connected Systems SWG — Events", "url": "https://agora.ogc.org/c/events-connected-systems-swg/", "note": "SWG events feed on OGC Agora.", "tag": "Forum", "icon": "fa-calendar-alt" }
             ]
         }
     ],
