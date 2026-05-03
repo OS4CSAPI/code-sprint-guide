@@ -31,7 +31,7 @@ html(lang='en')
 
         link(href='../css/styles.css', rel='stylesheet')
 
-    body#page-top(data-bs-spy='scroll', data-bs-target='#mainNav', data-bs-offset='74')
+    body#page-top(data-bs-spy='scroll', data-bs-target='#mainNav', data-bs-root-margin='0px 0px -55%', data-bs-smooth-scroll='true', tabindex='0')
 
         //- Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
@@ -129,9 +129,9 @@ html(lang='en')
                                 i.fas.fa-microphone.fa-stack-1x.fa-inverse
                             h4.my-3 Attend the Talks
                             p.text-muted
-                                | Show up — in person or remote — for the 
+                                | Show up — in person or remote — for the four 
                                 a(href='#talks') CSAPI-themed talks
-                                |  OS4CSAPI members are giving across the three sprint days. Bringing an audience helps signal interest in CSAPI to the wider OGC community.
+                                |  OS4CSAPI members are giving on Day 3 (Wednesday, 13 May), the final day of the sprint. Bringing an audience helps signal interest in CSAPI to the wider OGC community.
 
         //- Registration
         section.page-section.bg-light#register
@@ -212,7 +212,7 @@ html(lang='en')
                 .row.justify-content-center.mb-4
                     .col-lg-9
                         p.text-center.text-muted
-                            | Four OS4CSAPI participants are filling speaking slots on the final afternoon of the sprint, each presenting on a Connected Systems topic. These are individual contributions to the broader OGC Builder Days agenda — not a dedicated CSAPI track. All sessions are accessible in person at Geovation, on Microsoft Teams, and via the #connected-systems Discord channel.
+                            | Four OS4CSAPI participants are filling speaking slots across Day 3 — the final day of the sprint — with sessions running from late morning into early afternoon. Each presents on a Connected Systems topic. These are individual contributions to the broader OGC Builder Days agenda — not a dedicated CSAPI track. All sessions are accessible in person at Geovation, on Microsoft Teams, and via the #connected-systems Discord channel.
                 .row.g-4.align-items-start
                     each talk in event.csapiDay.talks
                         .col-md-6
