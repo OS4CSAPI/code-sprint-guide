@@ -43,7 +43,7 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
                         li.nav-item: a.nav-link(href='#dashboard') Dashboard
-                        li.nav-item: a.nav-link(href='#csapi-day') CSAPI Day
+                        li.nav-item: a.nav-link(href='#talks') Talks
                         li.nav-item: a.nav-link(href='#goals') Goals
                         li.nav-item: a.nav-link(href='#implementations') Projects
                         li.nav-item: a.nav-link(href='#participate') Participate
@@ -59,7 +59,7 @@ html(lang='en')
                     | #{new Date(event.startDateTimeISO).toUTCString().slice(0,16)} – #{new Date(event.endDateTimeISO).toUTCString().slice(0,16)} · #{event.eventTimeZoneLabel}
                     br
                     a.masthead-venue-link(href=event.venue.mapsUrl, target='_blank', rel='noopener')= `${event.venue.name} — ${event.venue.address}`
-                a.btn.btn-primary.btn-xl.text-uppercase.me-2(href='#csapi-day') See the CSAPI Day
+                a.btn.btn-primary.btn-xl.text-uppercase.me-2(href='#talks') See our talks
                 a.btn.btn-dark.btn-xl.text-uppercase(href=event.links.register, target='_blank', rel='noopener') Register
 
         //- Live dashboard (countdown / calendar / time zones)
@@ -93,16 +93,16 @@ html(lang='en')
                         p.mb-0
                             | This page is an open invitation. If you are working on anything CSAPI-related, in the open, during the timeframe of the sprint — and you would like that work to be visible to the OGC community at the event — then this guide is for you, and you are an OS4CSAPI participant for this sprint. There is no formal membership and no required hours.
 
-        //- The CSAPI Day
-        section.page-section.bg-light#csapi-day
+        //- OS4CSAPI talks during the sprint
+        section.page-section.bg-light#talks
             .container
                 .text-center
-                    h2.section-heading.text-uppercase The CSAPI Day
+                    h2.section-heading.text-uppercase OS4CSAPI Talks at the Sprint
                     h3.section-subheading.text-muted= event.csapiDay.label
                 .row.justify-content-center.mb-4
                     .col-lg-9
                         p.text-center.text-muted
-                            | OS4CSAPI participants have four 30-minute talks scheduled back-to-back on the final day of the sprint. Together, this is effectively a CSAPI afternoon inside OGC Builder Days — accessible in person at Geovation, on Microsoft Teams, and via the #connected-systems Discord channel.
+                            | Four OS4CSAPI participants are filling speaking slots on the final afternoon of the sprint, each presenting on a Connected Systems topic. These are individual contributions to the broader OGC Builder Days agenda — not a dedicated CSAPI track. All sessions are accessible in person at Geovation, on Microsoft Teams, and via the #connected-systems Discord channel.
                 .row.g-4
                     each talk in event.csapiDay.talks
                         .col-md-6
