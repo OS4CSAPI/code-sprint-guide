@@ -66,6 +66,20 @@ html(lang='en')
         include ../includes/dashboard
         +sprintDashboard(event)
 
+        //- Unofficial-companion disclaimer
+        section.py-4.bg-white.disclaimer-strip
+            .container
+                .row.justify-content-center
+                    .col-lg-9
+                        .alert.alert-info.mb-0.text-center.disclaimer-alert(role='note')
+                            i.fas.fa-info-circle.me-2
+                            | This is a community-maintained OS4CSAPI companion guide for participants working on OGC API – Connected Systems topics during the sprint. For official event registration, agenda, and venue information, use the
+                            |  
+                            a(href=event.links.register, target='_blank', rel='noopener') OGC event page
+                            |  and 
+                            a(href=event.links.wiki, target='_blank', rel='noopener') sprint wiki
+                            | .
+
         //- About OS4CSAPI / Why this page
         section.page-section#about
             .container
