@@ -47,6 +47,7 @@ html(lang='en')
                         li.nav-item: a.nav-link(href='#register') Register
                         li.nav-item: a.nav-link(href='#goals') Goals
                         li.nav-item: a.nav-link(href='#talks') Talks
+                        li.nav-item: a.nav-link(href='#daily-reporting') Daily Reports
                         li.nav-item: a.nav-link(href='#implementations') Projects
                         li.nav-item: a.nav-link(href='#logistics') Logistics
 
@@ -135,11 +136,9 @@ html(lang='en')
                                 i.fas.fa-comments.fa-stack-1x.fa-inverse
                             h4.my-3 Drop daily notes
                             p.text-muted
-                                | Share what you got done each day in the 
-                                a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
-                                |  space — gets aggregated into the daily brief-backs.
-                            p.text-muted.small.mb-0
-                                | Prefer not to post yourself? Send your update to Sam by any channel and he'll liaise it into Discussions on your behalf, with attribution.
+                                | See 
+                                a(href='#daily-reporting') Daily Participation Reporting
+                                |  for the full guidance — short note each day, aggregated into the daily brief-backs.
                     .col
                         .text-center
                             span.fa-stack.fa-3x
@@ -196,15 +195,33 @@ html(lang='en')
                         p
                             | OGC has opened a public GitHub thread, 
                             a(href=event.links.issue181, target='_blank', rel='noopener') opengeospatial/developer-events#181
-                            | , inviting every sprint participant to post a comment describing what they plan to work on. It is the most visible single channel for getting your work onto OGC's radar before the sprint starts, and it is read by the organizers, mentors, and other tracks. If you would prefer not to post yourself, send the same paragraph to Sam (any channel) and it will be posted on your behalf with a clear attribution.
+                            | , inviting every sprint participant to post a comment describing what they plan to work on. It is the most visible single channel for getting your work onto OGC's radar before the sprint starts, and it is read by the organizers, mentors, and other tracks. If you would prefer not to post yourself, get the gist of it to Sam any way you like — a paragraph, a quick call, a text, a Discord DM — and it will be posted on your behalf with a clear attribution.
                         .card.shadow-sm.mt-4
                             .card-body
                                 p.text-muted.small.mb-2.text-uppercase Suggested template — adapt freely
                                 p.fst-italic.mb-0
                                     | I will be working on [project / repo] during the May 2026 sprint as part of the OS4CSAPI community. My focus is [Pub/Sub, Binary, conformance tests, ETL, sample data, server, client, docs — pick what fits]. If anyone is interested in [collaborating on / testing / reviewing] this, please reach out on Discord or in the OS4CSAPI Discussions space.
 
+        //- Daily participation reporting
+        section.page-section.bg-light#daily-reporting
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Daily Participation Reporting
+                    h3.section-subheading.text-muted A short note each sprint day — aggregated into the daily brief-backs.
+                .row.justify-content-center
+                    .col-lg-9
+                        p
+                            | During the three sprint days, OS4CSAPI participants are encouraged to drop a short note each day describing what they got done, what's blocking them, and what they're picking up next. These notes get aggregated into the daily brief-backs and surfaced to the wider OGC community. Post directly in 
+                            a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
+                            | , or send your update to Sam any way you like — a written note, a quick call, a text, a Discord DM — and he will post it for you with attribution.
+                        .card.shadow-sm.mt-4
+                            .card-body
+                                p.text-muted.small.mb-2.text-uppercase Suggested daily template — adapt freely
+                                p.fst-italic.mb-0
+                                    | Day [1 / 2 / 3] — [your name / project]. Today: [what you got done]. Blockers: [anything stuck, or "none"]. Next: [what you're picking up tomorrow / after the sprint]. Looking for: [reviewers / testers / collaborators / nothing].
+
         //- OS4CSAPI talks during the sprint
-        section.page-section.bg-light#talks
+        section.page-section#talks
             .container
                 .text-center
                     h2.section-heading.text-uppercase OS4CSAPI Talks at the Sprint
@@ -236,7 +253,7 @@ html(lang='en')
                                         p.talk-abstract.mb-0= talk.abstract
 
         //- Implementations of interest
-        section.page-section#implementations
+        section.page-section.bg-light#implementations
             .container
                 .text-center
                     h2.section-heading.text-uppercase Implementations of Interest
@@ -266,7 +283,7 @@ html(lang='en')
                                             span.impl-people= impl.people
 
         //- Logistics (incl. liaison)
-        section.page-section.bg-light#logistics
+        section.page-section#logistics
             .container
                 .text-center
                     h2.section-heading.text-uppercase Logistics
@@ -309,7 +326,7 @@ html(lang='en')
                                 a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
 
         //- About OS4CSAPI / Why this page
-        section.page-section#about
+        section.page-section.bg-light#about
             .container
                 .text-center
                     h2.section-heading.text-uppercase About OS4CSAPI
