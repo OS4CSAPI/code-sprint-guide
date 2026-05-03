@@ -152,7 +152,7 @@
             {
                 "name": "HAKUNAPI",
                 "url": "https://github.com/nlsfi/hakunapi",
-                "description": "Java OGC API server (NLS Finland) with CSAPI support",
+                "description": "Java OGC API server (NLS Finland)",
                 "people": [
                     { "handle": "teezip", "url": "https://github.com/teezip" },
                     { "handle": "nls-jajuko", "url": "https://github.com/nls-jajuko" },
