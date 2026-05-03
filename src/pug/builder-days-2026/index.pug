@@ -43,11 +43,11 @@ html(lang='en')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
                         li.nav-item: a.nav-link(href='#dashboard') Dashboard
-                        li.nav-item: a.nav-link(href='#talks') Talks
-                        li.nav-item: a.nav-link(href='#goals') Goals
-                        li.nav-item: a.nav-link(href='#implementations') Projects
                         li.nav-item: a.nav-link(href='#participate') Participate
                         li.nav-item: a.nav-link(href='#register') Register
+                        li.nav-item: a.nav-link(href='#goals') Goals
+                        li.nav-item: a.nav-link(href='#talks') Talks
+                        li.nav-item: a.nav-link(href='#implementations') Projects
                         li.nav-item: a.nav-link(href='#logistics') Logistics
 
         //- Masthead
@@ -78,6 +78,15 @@ html(lang='en')
                             a(href=event.links.register, target='_blank', rel='noopener') OGC event page
                             |  and 
                             a(href=event.links.wiki, target='_blank', rel='noopener') sprint wiki
+                            | .
+                        p.text-center.text-muted.small.mt-3.mb-0
+                            i.fas.fa-comment-dots.me-2
+                            | Comments, questions, or suggestions about this site? Open an issue on 
+                            a(href='https://github.com/OS4CSAPI/code-sprint-guide/issues', target='_blank', rel='noopener') the repo
+                            | , drop a note in 
+                            a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
+                            | , or email 
+                            a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
                             | .
 
         //- How to participate
@@ -119,7 +128,7 @@ html(lang='en')
                             h4.my-3 Tell OGC what you'll work on
                             p.text-muted
                                 | Comment on 
-                                a(href=event.links.issue181, target='_blank', rel='noopener') developer-events #181
+                                a(href='#issue-181') developer-events #181
                                 |  — OGC's public "what is everybody working on" thread. CSAPI is currently underrepresented there.
                     .col
                         .text-center
@@ -164,8 +173,24 @@ html(lang='en')
                             a(href=event.links.discord, target='_blank', rel='noopener') OGC events Discord
                             |  so you can find the #connected-systems channel before day one.
 
+        //- Sprint Goals
+        section.page-section.bg-light#goals
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Sprint Goals
+                    h3.section-subheading.text-muted What OS4CSAPI is collectively working toward at this sprint.
+                .row.justify-content-center
+                    .col-lg-9
+                        ol.goals-list
+                            each goal in event.sprintGoals
+                                li= goal
+                        p.text-center.text-muted.small.mt-4.mb-0
+                            | Goal 6 tracks the official spec repository at 
+                            a(href=event.links.csapiSpecRepo, target='_blank', rel='noopener')= event.links.csapiSpecRepo
+                            | .
+
         //- Issue #181 detail
-        section.page-section.bg-light#issue-181
+        section.page-section#issue-181
             .container
                 .text-center
                     h2.section-heading.text-uppercase About Issue #181
@@ -185,7 +210,7 @@ html(lang='en')
                                     | I will be working on [project / repo] during the May 2026 sprint as part of the OS4CSAPI community. My focus is [Pub/Sub, Binary, conformance tests, ETL, sample data, server, client, docs — pick what fits]. If anyone is interested in [collaborating on / testing / reviewing] this, please reach out on Discord or in the OS4CSAPI Discussions space.
 
         //- OS4CSAPI talks during the sprint
-        section.page-section#talks
+        section.page-section.bg-light#talks
             .container
                 .text-center
                     h2.section-heading.text-uppercase OS4CSAPI Talks at the Sprint
@@ -215,22 +240,6 @@ html(lang='en')
                                     details
                                         summary Read the full abstract
                                         p.talk-abstract.mb-0= talk.abstract
-
-        //- Sprint Goals
-        section.page-section.bg-light#goals
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase Sprint Goals
-                    h3.section-subheading.text-muted What OS4CSAPI is collectively working toward at this sprint.
-                .row.justify-content-center
-                    .col-lg-9
-                        ol.goals-list
-                            each goal in event.sprintGoals
-                                li= goal
-                        p.text-center.text-muted.small.mt-4.mb-0
-                            | Goal 6 tracks the official spec repository at 
-                            a(href=event.links.csapiSpecRepo, target='_blank', rel='noopener')= event.links.csapiSpecRepo
-                            | .
 
         //- Implementations of interest
         section.page-section#implementations
