@@ -147,3 +147,19 @@
         setInterval(refreshLocalTimes, 30000);
     });
 })();
+
+// Navbar shrink-on-scroll (runs on every page, independent of widgets)
+(function () {
+    'use strict';
+    function navbarShrink() {
+        var nav = document.getElementById('mainNav');
+        if (!nav) return;
+        if (window.scrollY === 0) {
+            nav.classList.remove('navbar-shrink');
+        } else {
+            nav.classList.add('navbar-shrink');
+        }
+    }
+    window.addEventListener('DOMContentLoaded', navbarShrink);
+    document.addEventListener('scroll', navbarShrink, { passive: true });
+})();
