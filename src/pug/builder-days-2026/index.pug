@@ -340,31 +340,22 @@ html(lang='en')
                                 a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
 
         //- Useful CSAPI Links
-        section.page-section.bg-light#useful-links
+        section.page-section.bg-light.useful-links-section#useful-links
             .container
                 .text-center
                     h2.section-heading.text-uppercase Useful CSAPI Links
                     h3.section-subheading.text-muted Specs and reference material for getting up to speed on CSAPI.
-                .row.g-4.justify-content-center
-                    each group in event.usefulLinks
-                        .col-lg-6
-                            .card.h-100.shadow-sm.useful-links-card
-                                .card-header.useful-links-card__header
-                                    if group.icon
-                                        i.fas.me-2(class=group.icon)
-                                    span.useful-links-card__title= group.category
-                                .card-body.p-0
-                                    ul.useful-links-list.mb-0
+                .row.justify-content-center
+                    .col-lg-10
+                        .useful-links-grid
+                            each group in event.usefulLinks
+                                .useful-links-group
+                                    h4.useful-links-group__title= group.category
+                                    ul.useful-links-list
                                         each link in group.links
                                             li
                                                 a.useful-link(href=link.url, target='_blank', rel='noopener')
-                                                    if link.icon
-                                                        - var iconStyle = link.iconStyle || 'fas';
-                                                        i.useful-link__icon(class=iconStyle + ' ' + link.icon)
-                                                    span.useful-link__body
-                                                        span.useful-link__name= link.name
-                                                        if link.note
-                                                            span.useful-link-note= link.note
+                                                    span.useful-link__name= link.name
                                                     if link.tag
                                                         span.useful-link__tag= link.tag
 
