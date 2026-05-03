@@ -129,6 +129,19 @@
             font-weight: 600;
         }
 
+        .impl-handle {
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-left: 0.4rem;
+            color: $text-muted;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+
         .impl-people {
             display: block;
             color: $text-muted;

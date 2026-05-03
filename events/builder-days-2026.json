@@ -91,20 +91,20 @@
     ],
     "implementations": {
         "servers": [
-            { "name": "connected-systems-go", "url": "https://github.com/SomethingCreativeStudios/connected-systems-go", "people": "Go reference server (OS4CSAPI-hosted demo)" },
-            { "name": "OpenSensorHub", "url": "https://github.com/opensensorhub", "people": "Ian Patterson, Salwa Jeries, Kalyn Stricklin" },
-            { "name": "connected-systems-pygeoapi (52°North)", "url": "https://github.com/52North/connected-systems-pygeoapi", "people": "Jan Speckamp, Christian Autermann, Jirka" },
-            { "name": "HAKUNAPI", "url": "https://github.com/nlsfi/hakunapi", "people": "Janne Heikkilä, Dave Archer, Eric LoMonaco" }
+            { "name": "connected-systems-go", "url": "https://github.com/SomethingCreativeStudios/connected-systems-go", "org": "SomethingCreativeStudios", "orgUrl": "https://github.com/SomethingCreativeStudios", "people": "Go reference server (OS4CSAPI-hosted demo)" },
+            { "name": "OpenSensorHub", "url": "https://github.com/opensensorhub", "org": "opensensorhub", "orgUrl": "https://github.com/opensensorhub", "people": "Ian Patterson, Salwa Jeries, Kalyn Stricklin" },
+            { "name": "connected-systems-pygeoapi (52°North)", "url": "https://github.com/52North/connected-systems-pygeoapi", "org": "52North", "orgUrl": "https://github.com/52North", "people": "Jan Speckamp, Christian Autermann, Jirka" },
+            { "name": "HAKUNAPI", "url": "https://github.com/nlsfi/hakunapi", "org": "nlsfi", "orgUrl": "https://github.com/nlsfi", "people": "Janne Heikkilä, Dave Archer, Eric LoMonaco" }
         ],
         "clients": [
-            { "name": "ogc-client (CSAPI fork)", "url": "https://github.com/OS4CSAPI/ogc-client", "people": "Sam Bolling — TypeScript client library" },
-            { "name": "ogc-csapi-explorer", "url": "https://github.com/OS4CSAPI/ogc-csapi-explorer", "people": "Sam Bolling — reference web client built on ogc-client" },
-            { "name": "ConnectedSystemsAPI-CPP", "url": "https://github.com/Botts-Innovative-Research/ConnectedSystemsAPI-CPP", "people": "Botts Innovative Research — C++ client" },
-            { "name": "OSCAR Viewer", "url": "https://github.com/Botts-Innovative-Research/oscar-viewer", "people": "Botts Innovative Research — web app" },
-            { "name": "OSHConnect-Python", "url": "https://github.com/Botts-Innovative-Research/OSHConnect-Python", "people": "Botts Innovative Research — Python client" },
-            { "name": "OSHViewer", "url": "https://github.com/Botts-Innovative-Research/osh-viewer", "people": "Botts Innovative Research — web app" },
-            { "name": "OWSLib", "url": "https://github.com/geopython/OWSLib", "people": "Ian Patterson, Tom Kralidis" },
-            { "name": "QGIS CSAPI Plugin", "url": "https://github.com/qgis/QGIS/issues/63108", "people": "Joana Simoes" }
+            { "name": "ogc-client (CSAPI fork)", "url": "https://github.com/OS4CSAPI/ogc-client", "org": "OS4CSAPI", "orgUrl": "https://github.com/OS4CSAPI", "people": "Sam Bolling — TypeScript client library" },
+            { "name": "ogc-csapi-explorer", "url": "https://github.com/OS4CSAPI/ogc-csapi-explorer", "org": "OS4CSAPI", "orgUrl": "https://github.com/OS4CSAPI", "people": "Sam Bolling — reference web client built on ogc-client" },
+            { "name": "ConnectedSystemsAPI-CPP", "url": "https://github.com/Botts-Innovative-Research/ConnectedSystemsAPI-CPP", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — C++ client" },
+            { "name": "OSCAR Viewer", "url": "https://github.com/Botts-Innovative-Research/oscar-viewer", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — web app" },
+            { "name": "OSHConnect-Python", "url": "https://github.com/Botts-Innovative-Research/OSHConnect-Python", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — Python client" },
+            { "name": "OSHViewer", "url": "https://github.com/Botts-Innovative-Research/osh-viewer", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — web app" },
+            { "name": "OWSLib", "url": "https://github.com/geopython/OWSLib", "org": "geopython", "orgUrl": "https://github.com/geopython", "people": "Ian Patterson, Tom Kralidis" },
+            { "name": "QGIS CSAPI Plugin", "url": "https://github.com/qgis/QGIS/issues/63108", "org": "qgis", "orgUrl": "https://github.com/qgis", "people": "Joana Simoes" }
         ]
     }
 }

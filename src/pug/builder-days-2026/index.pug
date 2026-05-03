@@ -250,6 +250,9 @@ html(lang='en')
                                     each impl in event.implementations.servers
                                         li
                                             a(href=impl.url, target='_blank', rel='noopener')= impl.name
+                                            if impl.org
+                                                |  
+                                                a.impl-handle(href=impl.orgUrl, target='_blank', rel='noopener')= '@' + impl.org
                                             span.impl-people= impl.people
                     .col-md-5
                         .card.h-100.shadow-sm
@@ -261,6 +264,9 @@ html(lang='en')
                                     each impl in event.implementations.clients
                                         li
                                             a(href=impl.url, target='_blank', rel='noopener')= impl.name
+                                            if impl.org
+                                                |  
+                                                a.impl-handle(href=impl.orgUrl, target='_blank', rel='noopener')= '@' + impl.org
                                             span.impl-people= impl.people
 
         //- Logistics (incl. liaison)
