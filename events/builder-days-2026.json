@@ -54,6 +54,7 @@
         { "label": "Brussels / Paris", "iana": "Europe/Paris" },
         { "label": "Berlin", "iana": "Europe/Berlin" },
         { "label": "Helsinki", "iana": "Europe/Helsinki" },
+        { "label": "Hyderabad, India", "iana": "Asia/Kolkata" },
         { "label": "U.S. Eastern", "iana": "America/New_York" },
         { "label": "U.S. Central", "iana": "America/Chicago" },
         { "label": "U.S. Mountain", "iana": "America/Denver" },
