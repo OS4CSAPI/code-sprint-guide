@@ -80,6 +80,68 @@ html(lang='en')
                             a(href=event.links.wiki, target='_blank', rel='noopener') sprint wiki
                             | .
 
+        //- How to participate
+        section.page-section.bg-light#participate
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase How to Participate
+                    h3.section-subheading.text-muted Choose what works for you. Hybrid is fully supported.
+                .row.g-4
+                    .col-md-4
+                        .text-center
+                            span.fa-stack.fa-3x
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fas.fa-user-plus.fa-stack-1x.fa-inverse
+                            h4.my-3 Register & Connect
+                            p.text-muted
+                                | Register (free) on the 
+                                a(href=event.links.register, target='_blank', rel='noopener') OGC event page
+                                | , then join the 
+                                a(href=event.links.discord, target='_blank', rel='noopener') OGC events Discord
+                                |  (or the 
+                                a(href=event.links.matrix, target='_blank', rel='noopener') Matrix bridge
+                                | ).
+                    .col-md-4
+                        .text-center
+                            span.fa-stack.fa-3x
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fas.fa-bullhorn.fa-stack-1x.fa-inverse
+                            h4.my-3 Tell OGC what you'll work on
+                            p.text-muted
+                                | Comment on 
+                                a(href=event.links.issue181, target='_blank', rel='noopener') developer-events #181
+                                |  — OGC's public "what is everybody working on" thread. CSAPI is currently underrepresented there.
+                    .col-md-4
+                        .text-center
+                            span.fa-stack.fa-3x
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fas.fa-comments.fa-stack-1x.fa-inverse
+                            h4.my-3 Drop daily notes
+                            p.text-muted
+                                | Share what you got done each day in the 
+                                a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
+                                |  space — gets aggregated into the daily brief-backs.
+
+        //- Issue #181 detail
+        section.page-section#issue-181
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase About Issue #181
+                    h3.section-subheading.text-muted The "what is everybody working on" thread.
+                .row.justify-content-center
+                    .col-lg-9
+                        p
+                            | OGC has opened a public GitHub thread, 
+                            a(href=event.links.issue181, target='_blank', rel='noopener') opengeospatial/developer-events#181
+                            | , inviting every sprint participant to post a comment describing what they plan to work on. It is the most visible single channel for getting your work onto OGC's radar before the sprint starts, and it is read by the organizers, mentors, and other tracks.
+                        p
+                            | At the moment, the CSAPI community is underrepresented on that thread. If you are happy to post directly, please do — a single short paragraph is enough. If you would prefer not to post yourself, send the same paragraph to Sam (any channel) and it will be posted on your behalf with a clear attribution.
+                        .card.shadow-sm.mt-4
+                            .card-body
+                                p.text-muted.small.mb-2.text-uppercase Suggested template — adapt freely
+                                p.fst-italic.mb-0
+                                    | I will be working on [project / repo] during the May 2026 sprint as part of the OS4CSAPI community. My focus is [Pub/Sub, Binary, conformance tests, ETL, sample data, server, client, docs — pick what fits]. If anyone is interested in [collaborating on / testing / reviewing] this, please reach out on Discord or in the OS4CSAPI Discussions space.
+
         //- About OS4CSAPI / Why this page
         section.page-section#about
             .container
@@ -170,68 +232,6 @@ html(lang='en')
                                         li
                                             a(href=impl.url, target='_blank', rel='noopener')= impl.name
                                             span.impl-people= impl.people
-
-        //- How to participate
-        section.page-section#participate
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase How to Participate
-                    h3.section-subheading.text-muted Choose what works for you. Hybrid is fully supported.
-                .row.g-4
-                    .col-md-4
-                        .text-center
-                            span.fa-stack.fa-3x
-                                i.fas.fa-circle.fa-stack-2x.text-primary
-                                i.fas.fa-user-plus.fa-stack-1x.fa-inverse
-                            h4.my-3 Register & Connect
-                            p.text-muted
-                                | Register (free) on the 
-                                a(href=event.links.register, target='_blank', rel='noopener') OGC event page
-                                | , then join the 
-                                a(href=event.links.discord, target='_blank', rel='noopener') OGC events Discord
-                                |  (or the 
-                                a(href=event.links.matrix, target='_blank', rel='noopener') Matrix bridge
-                                | ).
-                    .col-md-4
-                        .text-center
-                            span.fa-stack.fa-3x
-                                i.fas.fa-circle.fa-stack-2x.text-primary
-                                i.fas.fa-bullhorn.fa-stack-1x.fa-inverse
-                            h4.my-3 Tell OGC what you'll work on
-                            p.text-muted
-                                | Comment on 
-                                a(href=event.links.issue181, target='_blank', rel='noopener') developer-events #181
-                                |  — OGC's public "what is everybody working on" thread. CSAPI is currently underrepresented there.
-                    .col-md-4
-                        .text-center
-                            span.fa-stack.fa-3x
-                                i.fas.fa-circle.fa-stack-2x.text-primary
-                                i.fas.fa-comments.fa-stack-1x.fa-inverse
-                            h4.my-3 Drop daily notes
-                            p.text-muted
-                                | Share what you got done each day in the 
-                                a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
-                                |  space — gets aggregated into the daily brief-backs.
-
-        //- Issue #181 detail
-        section.page-section.bg-light#issue-181
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase About Issue #181
-                    h3.section-subheading.text-muted The "what is everybody working on" thread.
-                .row.justify-content-center
-                    .col-lg-9
-                        p
-                            | OGC has opened a public GitHub thread, 
-                            a(href=event.links.issue181, target='_blank', rel='noopener') opengeospatial/developer-events#181
-                            | , inviting every sprint participant to post a comment describing what they plan to work on. It is the most visible single channel for getting your work onto OGC's radar before the sprint starts, and it is read by the organizers, mentors, and other tracks.
-                        p
-                            | At the moment, the CSAPI community is underrepresented on that thread. If you are happy to post directly, please do — a single short paragraph is enough. If you would prefer not to post yourself, send the same paragraph to Sam (any channel) and it will be posted on your behalf with a clear attribution.
-                        .card.shadow-sm.mt-4
-                            .card-body
-                                p.text-muted.small.mb-2.text-uppercase Suggested template — adapt freely
-                                p.fst-italic.mb-0
-                                    | I will be working on [project / repo] during the May 2026 sprint as part of the OS4CSAPI community. My focus is [Pub/Sub, Binary, conformance tests, ETL, sample data, server, client, docs — pick what fits]. If anyone is interested in [collaborating on / testing / reviewing] this, please reach out on Discord or in the OS4CSAPI Discussions space.
 
         //- Before / During / After timeline
         section.page-section#timeline-section
