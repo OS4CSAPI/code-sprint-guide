@@ -10,7 +10,6 @@
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-top: 5px solid $primary;
-    height: 100%;
 
     &:hover {
         transform: translateY(-3px);
