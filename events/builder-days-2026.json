@@ -50,15 +50,15 @@
         }
     ],
     "timeZones": [
-        { "label": "U.S. Pacific", "iana": "America/Los_Angeles" },
-        { "label": "U.S. Mountain", "iana": "America/Denver" },
-        { "label": "U.S. Central", "iana": "America/Chicago" },
-        { "label": "U.S. Eastern", "iana": "America/New_York" },
-        { "label": "London, UK (event)", "iana": "Europe/London" },
-        { "label": "Brussels / Paris", "iana": "Europe/Paris" },
-        { "label": "Berlin", "iana": "Europe/Berlin" },
+        { "label": "Hyderabad, India", "iana": "Asia/Kolkata" },
         { "label": "Helsinki", "iana": "Europe/Helsinki" },
-        { "label": "Hyderabad, India", "iana": "Asia/Kolkata" }
+        { "label": "Berlin", "iana": "Europe/Berlin" },
+        { "label": "Brussels / Paris", "iana": "Europe/Paris" },
+        { "label": "London, UK", "iana": "Europe/London" },
+        { "label": "U.S. Eastern", "iana": "America/New_York" },
+        { "label": "U.S. Central", "iana": "America/Chicago" },
+        { "label": "U.S. Mountain", "iana": "America/Denver" },
+        { "label": "U.S. Pacific", "iana": "America/Los_Angeles" }
     ],
     "csapiDay": {
         "date": "2026-05-13",

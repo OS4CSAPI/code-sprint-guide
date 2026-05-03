@@ -153,9 +153,28 @@
     }
 
     tbody tr.tz-event-row td {
-        background-color: rgba($primary, 0.18);
+        background-color: transparent;
         font-weight: 600;
         color: $gray-900;
+        position: relative;
+    }
+
+    tbody tr.tz-event-row td:first-child {
+        box-shadow: inset 3px 0 0 0 $primary;
+    }
+
+    .tz-event-badge {
+        display: inline-block;
+        margin-right: 0.45rem;
+        padding: 0.05rem 0.4rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $gray-900;
+        background-color: $primary;
+        border-radius: 2px;
+        vertical-align: 1px;
     }
 }
 

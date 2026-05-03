@@ -121,8 +121,11 @@
                 var hh = offset / 60;
                 offsetText = (hh > 0 ? '+' : '') + hh + ' h';
             }
+            var labelCell = isEvent
+                ? '<td><span class="tz-event-badge">Event</span>' + z.label + '</td>'
+                : '<td>' + z.label + '</td>';
             tr.innerHTML =
-                '<td>' + z.label + '</td>' +
+                labelCell +
                 '<td class="local-time" data-tz="' + z.iana + '">' + formatLocalTime(now, z.iana) + '</td>' +
                 '<td class="' + offsetClass + '">' + offsetText + '</td>';
             tbody.appendChild(tr);
