@@ -6,3 +6,13 @@
 
 @import "./variables/colors.scss";
 @import "./variables/typography.scss";
+
+// Wider containers — give the content more breathing room toward the edges.
+// Bootstrap defaults: sm 540, md 720, lg 960, xl 1140, xxl 1320.
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1320px,
+    xxl: 1500px
+) !default;
