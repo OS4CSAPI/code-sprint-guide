@@ -258,6 +258,14 @@
                 "people": [
                     { "handle": "tipatterson-dev", "url": "https://github.com/tipatterson-dev" }
                 ]
+            },
+            {
+                "name": "ogc-csapi-agent",
+                "url": "https://github.com/nsnarayanam/ogc-csapi-agent",
+                "description": "Natural-language AI agent (Google Gemini ADK) for exploring CSAPI servers; built on the ogc-client CSAPI library",
+                "people": [
+                    { "handle": "nsnarayanam", "url": "https://github.com/nsnarayanam" }
+                ]
             }
         ]
     }
