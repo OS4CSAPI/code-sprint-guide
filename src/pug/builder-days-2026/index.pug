@@ -241,7 +241,7 @@ html(lang='en')
                     h2.section-heading.text-uppercase Repositories of Interest
                     h3.section-subheading.text-muted Open-source CSAPI server and client repos of interest to the OS4CSAPI effort.
                 .row.g-4.justify-content-center
-                    .col-md-5
+                    .col-md-4
                         .card.h-100.shadow-sm
                             .card-body
                                 h4.text-uppercase.mb-3
@@ -251,8 +251,15 @@ html(lang='en')
                                     each impl in event.implementations.servers
                                         li
                                             a(href=impl.url, target='_blank', rel='noopener')= impl.name
-                                            span.impl-people= impl.people
-                    .col-md-5
+                                            if impl.description
+                                                span.impl-desc= impl.description
+                                            if impl.people && impl.people.length
+                                                span.impl-people
+                                                    each person, idx in impl.people
+                                                        if idx > 0
+                                                            |  
+                                                        a.impl-handle(href=person.url, target='_blank', rel='noopener')= '@' + person.handle
+                    .col-md-4
                         .card.h-100.shadow-sm
                             .card-body
                                 h4.text-uppercase.mb-3
@@ -262,7 +269,32 @@ html(lang='en')
                                     each impl in event.implementations.clients
                                         li
                                             a(href=impl.url, target='_blank', rel='noopener')= impl.name
-                                            span.impl-people= impl.people
+                                            if impl.description
+                                                span.impl-desc= impl.description
+                                            if impl.people && impl.people.length
+                                                span.impl-people
+                                                    each person, idx in impl.people
+                                                        if idx > 0
+                                                            |  
+                                                        a.impl-handle(href=person.url, target='_blank', rel='noopener')= '@' + person.handle
+                    .col-md-4
+                        .card.h-100.shadow-sm
+                            .card-body
+                                h4.text-uppercase.mb-3
+                                    i.fas.fa-tools.text-primary.me-2
+                                    | Tools, simulators & encodings
+                                ul.implementations-list
+                                    each impl in event.implementations.tools
+                                        li
+                                            a(href=impl.url, target='_blank', rel='noopener')= impl.name
+                                            if impl.description
+                                                span.impl-desc= impl.description
+                                            if impl.people && impl.people.length
+                                                span.impl-people
+                                                    each person, idx in impl.people
+                                                        if idx > 0
+                                                            |  
+                                                        a.impl-handle(href=person.url, target='_blank', rel='noopener')= '@' + person.handle
 
         //- Quick Participation Links (formerly Logistics)
         section.page-section#logistics

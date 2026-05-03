@@ -69,7 +69,7 @@
         {
             "category": "OS4CSAPI",
             "links": [
-                { "name": "OS4CSAPI website", "url": "https://os4csapi.github.io/ogc-csapi-website/", "note": "Sister site — overview of CSAPI and the open-source ecosystem." },
+                { "name": "OS4CSAPI CSAPI developer page", "url": "https://os4csapi.github.io/ogc-csapi-website/", "note": "Developer-facing overview of CSAPI and the open-source ecosystem." },
                 { "name": "OS4CSAPI on GitHub", "url": "https://github.com/OS4CSAPI", "note": "Org hosting the OS4CSAPI repos and Discussions." },
                 { "name": "OS4CSAPI Discussions", "url": "https://github.com/OS4CSAPI/os4csapi-meta/discussions", "note": "Open forum for the OS4CSAPI effort." },
                 { "name": "Sprint issue #181", "url": "https://github.com/opengeospatial/developer-events/issues/181", "note": "OGC's call for CSAPI participation at Builder Days." }
@@ -142,20 +142,145 @@
     ],
     "implementations": {
         "servers": [
-            { "name": "connected-systems-go", "url": "https://github.com/SomethingCreativeStudios/connected-systems-go", "people": "Go reference server (OS4CSAPI-hosted demo)" },
-            { "name": "OpenSensorHub", "url": "https://github.com/opensensorhub", "people": "Ian Patterson, Salwa Jeries, Kalyn Stricklin" },
-            { "name": "connected-systems-pygeoapi (52°North)", "url": "https://github.com/52North/connected-systems-pygeoapi", "people": "Jan Speckamp, Christian Autermann, Jirka" },
-            { "name": "HAKUNAPI", "url": "https://github.com/nlsfi/hakunapi", "people": "Janne Heikkilä, Dave Archer, Eric LoMonaco" }
+            {
+                "name": "connected-systems-go",
+                "url": "https://github.com/SomethingCreativeStudios/connected-systems-go",
+                "description": "Go reference server (OS4CSAPI-hosted demo)",
+                "people": [
+                    { "handle": "SomethingCreativeStudios", "url": "https://github.com/SomethingCreativeStudios" },
+                    { "handle": "cam-s-hunt", "url": "https://github.com/cam-s-hunt" }
+                ]
+            },
+            {
+                "name": "OpenSensorHub",
+                "url": "https://github.com/opensensorhub",
+                "description": "Java-based open-source sensor hub with CSAPI support",
+                "people": [
+                    { "handle": "mikebotts", "url": "https://github.com/mikebotts" },
+                    { "handle": "drewbotts", "url": "https://github.com/drewbotts" },
+                    { "handle": "tipatterson-dev", "url": "https://github.com/tipatterson-dev" },
+                    { "handle": "kalynstricklin", "url": "https://github.com/kalynstricklin" },
+                    { "handle": "salsajeries", "url": "https://github.com/salsajeries" },
+                    { "handle": "BillBrown341", "url": "https://github.com/BillBrown341" },
+                    { "handle": "apoteau21", "url": "https://github.com/apoteau21" },
+                    { "handle": "TuckerGeoTech", "url": "https://github.com/TuckerGeoTech" },
+                    { "handle": "earocorn", "url": "https://github.com/earocorn" }
+                ]
+            },
+            {
+                "name": "connected-systems-pygeoapi (52°North)",
+                "url": "https://github.com/52North/connected-systems-pygeoapi",
+                "description": "Python pygeoapi-based CSAPI server",
+                "people": [
+                    { "handle": "SpeckiJ", "url": "https://github.com/SpeckiJ" },
+                    { "handle": "autermann", "url": "https://github.com/autermann" },
+                    { "handle": "tomkralidis", "url": "https://github.com/tomkralidis" }
+                ]
+            },
+            {
+                "name": "HAKUNAPI",
+                "url": "https://github.com/nlsfi/hakunapi",
+                "description": "Java OGC API server (NLS Finland) with CSAPI support",
+                "people": [
+                    { "handle": "teezip", "url": "https://github.com/teezip" },
+                    { "handle": "nls-jajuko", "url": "https://github.com/nls-jajuko" },
+                    { "handle": "jampukka", "url": "https://github.com/jampukka" },
+                    { "handle": "reinij", "url": "https://github.com/reinij" }
+                ]
+            }
         ],
         "clients": [
-            { "name": "ogc-client (CSAPI fork)", "url": "https://github.com/OS4CSAPI/ogc-client", "people": "Sam Bolling — TypeScript client library" },
-            { "name": "ogc-csapi-explorer", "url": "https://github.com/OS4CSAPI/ogc-csapi-explorer", "people": "Sam Bolling — reference web client built on ogc-client" },
-            { "name": "ConnectedSystemsAPI-CPP", "url": "https://github.com/Botts-Innovative-Research/ConnectedSystemsAPI-CPP", "people": "Botts Innovative Research — C++ client" },
-            { "name": "OSCAR Viewer", "url": "https://github.com/Botts-Innovative-Research/oscar-viewer", "people": "Botts Innovative Research — web app" },
-            { "name": "OSHConnect-Python", "url": "https://github.com/Botts-Innovative-Research/OSHConnect-Python", "people": "Botts Innovative Research — Python client" },
-            { "name": "OSHViewer", "url": "https://github.com/Botts-Innovative-Research/osh-viewer", "people": "Botts Innovative Research — web app" },
-            { "name": "OWSLib", "url": "https://github.com/geopython/OWSLib", "people": "Ian Patterson, Tom Kralidis" },
-            { "name": "QGIS CSAPI Plugin", "url": "https://github.com/qgis/QGIS/issues/63108", "people": "Joana Simoes" }
+            {
+                "name": "ogc-client (CSAPI fork)",
+                "url": "https://github.com/OS4CSAPI/ogc-client",
+                "description": "TypeScript client library",
+                "people": [
+                    { "handle": "Sam-Bolling", "url": "https://github.com/Sam-Bolling" }
+                ]
+            },
+            {
+                "name": "ogc-csapi-explorer",
+                "url": "https://github.com/OS4CSAPI/ogc-csapi-explorer",
+                "description": "Reference web client built on ogc-client",
+                "people": [
+                    { "handle": "Sam-Bolling", "url": "https://github.com/Sam-Bolling" }
+                ]
+            },
+            {
+                "name": "ConnectedSystemsAPI-CPP",
+                "url": "https://github.com/Botts-Innovative-Research/ConnectedSystemsAPI-CPP",
+                "description": "C++ client (Botts Innovative Research)",
+                "people": [
+                    { "handle": "drewbotts", "url": "https://github.com/drewbotts" }
+                ]
+            },
+            {
+                "name": "OSCAR Viewer",
+                "url": "https://github.com/Botts-Innovative-Research/oscar-viewer",
+                "description": "Web app (Botts Innovative Research)",
+                "people": [
+                    { "handle": "drewbotts", "url": "https://github.com/drewbotts" }
+                ]
+            },
+            {
+                "name": "OSHConnect-Python",
+                "url": "https://github.com/Botts-Innovative-Research/OSHConnect-Python",
+                "description": "Python client (Botts Innovative Research)",
+                "people": [
+                    { "handle": "drewbotts", "url": "https://github.com/drewbotts" }
+                ]
+            },
+            {
+                "name": "OSHViewer",
+                "url": "https://github.com/Botts-Innovative-Research/osh-viewer",
+                "description": "Web app (Botts Innovative Research)",
+                "people": [
+                    { "handle": "drewbotts", "url": "https://github.com/drewbotts" }
+                ]
+            },
+            {
+                "name": "OWSLib",
+                "url": "https://github.com/geopython/OWSLib",
+                "description": "Python OGC client library",
+                "people": [
+                    { "handle": "tipatterson-dev", "url": "https://github.com/tipatterson-dev" },
+                    { "handle": "tomkralidis", "url": "https://github.com/tomkralidis" }
+                ]
+            },
+            {
+                "name": "qgis-oacs-plugin",
+                "url": "https://github.com/byteroad/qgis-oacs-plugin",
+                "description": "QGIS plugin for OGC API – Connected Systems",
+                "people": [
+                    { "handle": "ricardogsilva", "url": "https://github.com/ricardogsilva" }
+                ]
+            }
+        ],
+        "tools": [
+            {
+                "name": "csapi_compliance",
+                "url": "https://github.com/Botts-Innovative-Research/csapi_compliance",
+                "description": "CSAPI conformance test suite (Botts Innovative Research)",
+                "people": [
+                    { "handle": "drewbotts", "url": "https://github.com/drewbotts" }
+                ]
+            },
+            {
+                "name": "OCSASim",
+                "url": "https://github.com/tipatterson-dev/OCSASim",
+                "description": "OGC CSAPI data simulator",
+                "people": [
+                    { "handle": "tipatterson-dev", "url": "https://github.com/tipatterson-dev" }
+                ]
+            },
+            {
+                "name": "SWECommonBinaryEncodings",
+                "url": "https://github.com/tipatterson-dev/SWECommonBinaryEncodings",
+                "description": "SWE Common binary encoding library",
+                "people": [
+                    { "handle": "tipatterson-dev", "url": "https://github.com/tipatterson-dev" }
+                ]
+            }
         ]
     }
 }

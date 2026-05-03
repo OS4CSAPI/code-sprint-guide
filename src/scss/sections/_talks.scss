@@ -129,11 +129,37 @@
             font-weight: 600;
         }
 
+        .impl-desc {
+            display: block;
+            color: $secondary;
+            font-size: 0.85rem;
+            margin-top: 0.2rem;
+        }
+
         .impl-people {
             display: block;
             color: $text-muted;
-            font-size: 0.85rem;
-            margin-top: 0.15rem;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            line-height: 1.6;
+        }
+
+        .impl-handle {
+            color: $text-muted;
+            text-decoration: none;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.78rem;
+            background: rgba($primary, 0.07);
+            border-radius: 4px;
+            padding: 0.05rem 0.35rem;
+            margin-right: 0.2rem;
+            white-space: nowrap;
+
+            &:hover,
+            &:focus {
+                color: $primary;
+                background: rgba($primary, 0.15);
+            }
         }
     }
 }
