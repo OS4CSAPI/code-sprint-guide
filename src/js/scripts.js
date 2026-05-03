@@ -110,6 +110,8 @@
         var rows = [];
         (event.timeZones || []).forEach(function (z) {
             var tr = document.createElement('tr');
+            var isEvent = z.iana === event.eventTimeZoneIANA;
+            if (isEvent) tr.className = 'tz-event-row';
             var offset = getOffsetMinutes(now, z.iana) - londonOffset;
             var offsetText, offsetClass = 'tz-offset';
             if (offset === 0) {

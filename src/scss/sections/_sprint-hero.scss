@@ -151,6 +151,12 @@
         color: $primary;
         font-weight: 600;
     }
+
+    tbody tr.tz-event-row td {
+        background-color: rgba($primary, 0.18);
+        font-weight: 600;
+        color: $gray-900;
+    }
 }
 
 @media (max-width: 575.98px) {
