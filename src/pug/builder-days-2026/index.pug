@@ -111,8 +111,15 @@ html(lang='en')
                                     p.talk-time= talk.time
                                     h3.talk-title= talk.title
                                     p.talk-speaker
-                                        strong= talk.speaker
-                                        span.talk-affiliation= ` — ${talk.affiliation}`
+                                        if talk.speakerUrl
+                                            strong: a.speaker-link(href=talk.speakerUrl, target='_blank', rel='noopener')= talk.speaker
+                                        else
+                                            strong= talk.speaker
+                                        |  — 
+                                        if talk.affiliationUrl
+                                            a.talk-affiliation(href=talk.affiliationUrl, target='_blank', rel='noopener')= talk.affiliation
+                                        else
+                                            span.talk-affiliation= talk.affiliation
                                     p.talk-summary= talk.summary
                                     details
                                         summary Read the full abstract
@@ -331,7 +338,11 @@ html(lang='en')
                 .row.justify-content-center
                     .col-lg-8.text-center
                         p
-                            | Sam Bolling (Riverside Research) is the OS4CSAPI liaison for this sprint. Any update — whether you want it forwarded to OGC, posted on issue #181, or just acknowledged privately — can go through him.
+                            | 
+                            a(href='https://github.com/Sam-Bolling', target='_blank', rel='noopener') Sam Bolling
+                            |  (
+                            a(href='https://www.riversideresearch.org/', target='_blank', rel='noopener') Riverside Research
+                            | ) is the OS4CSAPI liaison for this sprint. Any update — whether you want it forwarded to OGC, posted on issue #181, or just acknowledged privately — can go through him.
                         p.mb-0
                             | Easiest channels: OGC events Discord, OS4CSAPI Discussions, or email. If you would like to be added to a future OS4CSAPI mailing list, drop a note in Discussions.
 

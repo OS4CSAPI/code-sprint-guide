@@ -43,7 +43,9 @@
                 "time": "10:30 – 11:00 BST",
                 "title": "A case study in vibe-coding OGC CSAPI",
                 "speaker": "Sam Bolling",
+                "speakerUrl": "https://github.com/Sam-Bolling",
                 "affiliation": "Riverside Research",
+                "affiliationUrl": "https://www.riversideresearch.org/",
                 "summary": "Lifecycle walkthrough of an AI-assisted, no-code-skills contribution that produced a TypeScript client library for OGC API – Connected Systems.",
                 "abstract": "AI-assisted software development has emerged in the mainstream and public domain and is trending in a way that can alter the landscape of software development. As an early adoption of the practice, Mr. Sam Bolling, with no coding skills, used practices from agile, scrum, extreme programming, and predictive waterfall to use AI tools to complete an open-source code contribution that implements a typescript client library for the OGC API Connected Systems standard. This session walks through the lifecycle of that activity from beginning to present."
             },
@@ -52,6 +54,7 @@
                 "title": "Implementing Binary Encodings with OGC CSAPI",
                 "speaker": "Robin White",
                 "affiliation": "GeoRobotix",
+                "affiliationUrl": "https://georobotix.com/",
                 "summary": "How binary encodings can complement CSAPI to reduce bandwidth and improve performance for high-rate sensor data while preserving interoperability.",
                 "abstract": "Efficient exchange of sensor data becomes increasingly important as systems scale in volume, velocity, and operational demand. While OGC CSAPI provides a modern and standardized API approach for connected systems interoperability, binary encodings can help improve performance, reduce bandwidth burden, and support more practical handling of high-rate or data-intensive exchanges. This session walks through an implementation approach for applying binary encodings with OGC CSAPI, illustrating how they can complement the standard's API and data model foundations while preserving interoperability benefits."
             },
@@ -59,7 +62,9 @@
                 "time": "13:30 – 14:00 BST",
                 "title": "Implementing Pub/Sub MQTT with OGC CSAPI",
                 "speaker": "Ian Patterson",
+                "speakerUrl": "https://github.com/tipatterson-dev",
                 "affiliation": "GeoRobotix",
+                "affiliationUrl": "https://georobotix.com/",
                 "summary": "Walkthrough of an MQTT-based pub/sub implementation that complements CSAPI for event-driven, low-latency dissemination of sensor data.",
                 "abstract": "Many connected-system use cases require timely dissemination of events and updates without relying solely on repeated polling or strictly request-response interaction patterns. Publish/subscribe approaches can complement OGC CSAPI by supporting more responsive, event-driven exchange of sensor-related information across distributed systems. This session walks through an implementation approach using MQTT with OGC CSAPI to illustrate how pub/sub patterns can support interoperable connected-system workflows and highlight the practical benefits for real-world operational use."
             },
@@ -67,7 +72,9 @@
                 "time": "14:30 – 15:00 BST",
                 "title": "Automated tipping and cuing between a satellite and drone using OGC CSAPI",
                 "speaker": "Drew Botts",
+                "speakerUrl": "https://github.com/drewbotts",
                 "affiliation": "GeoRobotix",
+                "affiliationUrl": "https://georobotix.com/",
                 "summary": "End-to-end demo of cross-asset tipping and cuing built on CSAPI, using real, diverse sensing assets to illustrate the standardized capability.",
                 "abstract": "Tipping and Cueing between different sensing assets with no native association is a key use case in many organizationally and operationally defined domains. OGC CSAPI is both aware of and addresses this use case in a straightforward and standardized approach. This session walks through an example of that use case with the application of real, diverse sensing assets to illustrate the enabled capability and highlight the benefits."
             }

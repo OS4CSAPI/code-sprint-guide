@@ -40,6 +40,31 @@
         color: $secondary;
         margin-bottom: 0.85rem;
 
+        .speaker-link {
+            color: $secondary;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba($primary, 0.6);
+
+            &:hover,
+            &:focus {
+                color: $primary;
+                border-bottom-color: $primary;
+            }
+        }
+
+        a.talk-affiliation {
+            color: $text-muted;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba($text-muted, 0.5);
+
+            &:hover,
+            &:focus {
+                color: $primary;
+                border-bottom-color: $primary;
+            }
+        }
+
+        span.talk-affiliation,
         .talk-affiliation {
             color: $text-muted;
         }
