@@ -72,3 +72,24 @@ header.masthead {
         }
     }
 }
+
+// Disclaimer + site-feedback callouts in the masthead — keep alignment/spacing
+// from Bootstrap's .alert but drop the background/border tint so they read as
+// plain notes against the masthead background.
+.alert.disclaimer-alert {
+    background-color: transparent;
+    border-color: transparent;
+    color: inherit;
+    padding-left: 0;
+    padding-right: 0;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            color: ;
+        }
+    }
+}
