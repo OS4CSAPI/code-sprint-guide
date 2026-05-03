@@ -26,15 +26,55 @@
         "csapiSpecRepo": "https://github.com/opengeospatial/ogcapi-connected-systems"
     },
     "usefulLinks": [
-        { "name": "OS4CSAPI website", "url": "https://os4csapi.github.io/ogc-csapi-website/", "note": "Sister site — overview of CSAPI and the open-source ecosystem." },
-        { "name": "OS4CSAPI on GitHub", "url": "https://github.com/OS4CSAPI", "note": "Org hosting the OS4CSAPI repos and Discussions." },
-        { "name": "CSAPI standard repo", "url": "https://github.com/opengeospatial/ogcapi-connected-systems", "note": "Authoritative spec source, issues, and discussions." },
-        { "name": "OGC API – Connected Systems Part 1 (Feature Resources)", "url": "https://docs.ogc.org/is/23-001r1/23-001r1.html", "note": "Published Implementation Standard." },
-        { "name": "OGC API – Connected Systems Part 2 (Dynamic Data)", "url": "https://docs.ogc.org/is/23-002r0/23-002r0.html", "note": "Published Implementation Standard." },
-        { "name": "OGC CSAPI standard page", "url": "https://www.ogc.org/standard/ogcapi-connectedsystems/", "note": "OGC's official page for the standard." },
-        { "name": "OGC API family", "url": "https://ogcapi.ogc.org/", "note": "Cross-standard landing page for the OGC API suite." },
-        { "name": "OS4CSAPI Discussions", "url": "https://github.com/OS4CSAPI/os4csapi-meta/discussions", "note": "Open forum for the OS4CSAPI effort." },
-        { "name": "Sprint issue #181", "url": "https://github.com/opengeospatial/developer-events/issues/181", "note": "OGC's call for CSAPI participation at Builder Days." }
+        {
+            "category": "CSAPI Standard",
+            "links": [
+                { "name": "OGC API – Connected Systems – Part 1: Feature Resources (OGC 23-001)", "url": "https://docs.ogc.org/is/23-001/23-001.html", "note": "Approved Implementation Standard — Systems, Deployments, Procedures, Sampling Features, Properties." },
+                { "name": "OGC API – Connected Systems – Part 2: Dynamic Data (OGC 23-002)", "url": "https://docs.ogc.org/is/23-002/23-002.html", "note": "Approved Implementation Standard — DataStreams, Observations, Control Streams, Commands." },
+                { "name": "Part 1 OpenAPI bundle (YAML, OAS 3.1)", "url": "https://github.com/OS4CSAPI/ogc-client-CSAPI_2/blob/main/docs/research/standards/ogcapi-connectedsystems-1.bundled.oas31.yaml", "note": "Machine-readable Part 1 endpoint and schema definitions (all $refs resolved)." },
+                { "name": "Part 2 OpenAPI bundle (YAML, OAS 3.1)", "url": "https://github.com/OS4CSAPI/ogc-client-CSAPI_2/blob/main/docs/research/standards/ogcapi-connectedsystems-2.bundled.oas31.yaml", "note": "Machine-readable Part 2 endpoint and schema definitions (all $refs resolved)." },
+                { "name": "OGC CSAPI standard public page", "url": "https://www.ogc.org/standards/ogc-api-connected-systems/", "note": "OGC's official page for the standard." },
+                { "name": "OGC API – Connected Systems – v1.0 publication announcement", "url": "https://www.ogc.org/announcement/ogc-announces-publication-of-ogc-api-connected-systems-and-updates-to-supporting-standards/", "note": "Announcement of v1.0 and supporting-standard updates." },
+                { "name": "CSAPI standard repo (opengeospatial/ogcapi-connected-systems)", "url": "https://github.com/opengeospatial/ogcapi-connected-systems", "note": "Public repository for the Connected Systems SWG." }
+            ]
+        },
+        {
+            "category": "OGC API – Connected Systems Public Pages",
+            "links": [
+                { "name": "OGC API – Connected Systems landing page", "url": "https://ogcapi.ogc.org/connectedsystems/", "note": "Cross-standard landing page on ogcapi.ogc.org." },
+                { "name": "OGC API – Connected Systems overview", "url": "https://ogcapi.ogc.org/connectedsystems/overview.html", "note": "Public overview page (may need updating)." },
+                { "name": "OGC API family", "url": "https://ogcapi.ogc.org/", "note": "Cross-standard landing page for the OGC API suite." }
+            ]
+        },
+        {
+            "category": "Related OGC Standards",
+            "links": [
+                { "name": "OGC SensorML 3.0 (OGC 23-000r1)", "url": "https://docs.ogc.org/is/23-000r1/23-000r1.html", "note": "JSON-native sensor model language used by CSAPI for System and Procedure descriptions." },
+                { "name": "SensorML 3.0 JSON Schemas", "url": "https://schemas.opengis.net/sensorml/3.0/", "note": "Machine-readable schemas for SensorML 3.0." },
+                { "name": "OGC SensorML standard public page", "url": "https://www.ogc.org/standards/sensorml/", "note": "OGC's official page for SensorML." },
+                { "name": "OGC SWE Common 3.0 (OGC 23-011r1)", "url": "https://docs.ogc.org/is/23-011r1/23-011r1.html", "note": "Data component model for observation and control data (JSON / Text / Binary encodings)." },
+                { "name": "SWE Common 3.0 JSON Schemas", "url": "https://schemas.opengis.net/sweCommon/3.0/", "note": "Machine-readable schemas for SWE Common 3.0." },
+                { "name": "OGC SWE Common standard public page", "url": "https://www.ogc.org/standards/SWEcommon/", "note": "OGC's official page for SWE Common." },
+                { "name": "OGC API – Common (OGC 19-072)", "url": "https://docs.ogc.org/is/19-072/19-072.html", "note": "Foundation standard for landing pages, conformance, collections, and shared query parameters across the OGC API family." },
+                { "name": "OGC API – Features (OGC 17-069r4)", "url": "https://docs.ogc.org/is/17-069r4/17-069r4.html", "note": "Features API patterns CSAPI Part 1 builds on." }
+            ]
+        },
+        {
+            "category": "OGC Connected Systems SWG (Agora)",
+            "links": [
+                { "name": "Connected Systems SWG — General", "url": "https://agora.ogc.org/c/overview-716694/", "note": "SWG space on OGC Agora." },
+                { "name": "Connected Systems SWG — Events", "url": "https://agora.ogc.org/c/events-connected-systems-swg/", "note": "SWG events feed on OGC Agora." }
+            ]
+        },
+        {
+            "category": "OS4CSAPI",
+            "links": [
+                { "name": "OS4CSAPI website", "url": "https://os4csapi.github.io/ogc-csapi-website/", "note": "Sister site — overview of CSAPI and the open-source ecosystem." },
+                { "name": "OS4CSAPI on GitHub", "url": "https://github.com/OS4CSAPI", "note": "Org hosting the OS4CSAPI repos and Discussions." },
+                { "name": "OS4CSAPI Discussions", "url": "https://github.com/OS4CSAPI/os4csapi-meta/discussions", "note": "Open forum for the OS4CSAPI effort." },
+                { "name": "Sprint issue #181", "url": "https://github.com/opengeospatial/developer-events/issues/181", "note": "OGC's call for CSAPI participation at Builder Days." }
+            ]
+        }
     ],
     "timeZones": [
         { "label": "London, UK (event)", "iana": "Europe/London" },
@@ -102,20 +142,20 @@
     ],
     "implementations": {
         "servers": [
-            { "name": "connected-systems-go", "url": "https://github.com/SomethingCreativeStudios/connected-systems-go", "org": "SomethingCreativeStudios", "orgUrl": "https://github.com/SomethingCreativeStudios", "people": "Go reference server (OS4CSAPI-hosted demo)" },
-            { "name": "OpenSensorHub", "url": "https://github.com/opensensorhub", "org": "opensensorhub", "orgUrl": "https://github.com/opensensorhub", "people": "Ian Patterson, Salwa Jeries, Kalyn Stricklin" },
-            { "name": "connected-systems-pygeoapi (52°North)", "url": "https://github.com/52North/connected-systems-pygeoapi", "org": "52North", "orgUrl": "https://github.com/52North", "people": "Jan Speckamp, Christian Autermann, Jirka" },
-            { "name": "HAKUNAPI", "url": "https://github.com/nlsfi/hakunapi", "org": "nlsfi", "orgUrl": "https://github.com/nlsfi", "people": "Janne Heikkilä, Dave Archer, Eric LoMonaco" }
+            { "name": "connected-systems-go", "url": "https://github.com/SomethingCreativeStudios/connected-systems-go", "people": "Go reference server (OS4CSAPI-hosted demo)" },
+            { "name": "OpenSensorHub", "url": "https://github.com/opensensorhub", "people": "Ian Patterson, Salwa Jeries, Kalyn Stricklin" },
+            { "name": "connected-systems-pygeoapi (52°North)", "url": "https://github.com/52North/connected-systems-pygeoapi", "people": "Jan Speckamp, Christian Autermann, Jirka" },
+            { "name": "HAKUNAPI", "url": "https://github.com/nlsfi/hakunapi", "people": "Janne Heikkilä, Dave Archer, Eric LoMonaco" }
         ],
         "clients": [
-            { "name": "ogc-client (CSAPI fork)", "url": "https://github.com/OS4CSAPI/ogc-client", "org": "OS4CSAPI", "orgUrl": "https://github.com/OS4CSAPI", "people": "Sam Bolling — TypeScript client library" },
-            { "name": "ogc-csapi-explorer", "url": "https://github.com/OS4CSAPI/ogc-csapi-explorer", "org": "OS4CSAPI", "orgUrl": "https://github.com/OS4CSAPI", "people": "Sam Bolling — reference web client built on ogc-client" },
-            { "name": "ConnectedSystemsAPI-CPP", "url": "https://github.com/Botts-Innovative-Research/ConnectedSystemsAPI-CPP", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — C++ client" },
-            { "name": "OSCAR Viewer", "url": "https://github.com/Botts-Innovative-Research/oscar-viewer", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — web app" },
-            { "name": "OSHConnect-Python", "url": "https://github.com/Botts-Innovative-Research/OSHConnect-Python", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — Python client" },
-            { "name": "OSHViewer", "url": "https://github.com/Botts-Innovative-Research/osh-viewer", "org": "Botts-Innovative-Research", "orgUrl": "https://github.com/Botts-Innovative-Research", "people": "Botts Innovative Research — web app" },
-            { "name": "OWSLib", "url": "https://github.com/geopython/OWSLib", "org": "geopython", "orgUrl": "https://github.com/geopython", "people": "Ian Patterson, Tom Kralidis" },
-            { "name": "QGIS CSAPI Plugin", "url": "https://github.com/qgis/QGIS/issues/63108", "org": "qgis", "orgUrl": "https://github.com/qgis", "people": "Joana Simoes" }
+            { "name": "ogc-client (CSAPI fork)", "url": "https://github.com/OS4CSAPI/ogc-client", "people": "Sam Bolling — TypeScript client library" },
+            { "name": "ogc-csapi-explorer", "url": "https://github.com/OS4CSAPI/ogc-csapi-explorer", "people": "Sam Bolling — reference web client built on ogc-client" },
+            { "name": "ConnectedSystemsAPI-CPP", "url": "https://github.com/Botts-Innovative-Research/ConnectedSystemsAPI-CPP", "people": "Botts Innovative Research — C++ client" },
+            { "name": "OSCAR Viewer", "url": "https://github.com/Botts-Innovative-Research/oscar-viewer", "people": "Botts Innovative Research — web app" },
+            { "name": "OSHConnect-Python", "url": "https://github.com/Botts-Innovative-Research/OSHConnect-Python", "people": "Botts Innovative Research — Python client" },
+            { "name": "OSHViewer", "url": "https://github.com/Botts-Innovative-Research/osh-viewer", "people": "Botts Innovative Research — web app" },
+            { "name": "OWSLib", "url": "https://github.com/geopython/OWSLib", "people": "Ian Patterson, Tom Kralidis" },
+            { "name": "QGIS CSAPI Plugin", "url": "https://github.com/qgis/QGIS/issues/63108", "people": "Joana Simoes" }
         ]
     }
 }

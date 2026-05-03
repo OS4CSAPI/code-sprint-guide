@@ -129,25 +129,24 @@
             font-weight: 600;
         }
 
-        .impl-handle {
-            font-weight: 500;
-            font-size: 0.85rem;
-            margin-left: 0.4rem;
-            color: $text-muted;
-            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-
-            &:hover,
-            &:focus {
-                color: $primary;
-            }
-        }
-
         .impl-people {
             display: block;
             color: $text-muted;
             font-size: 0.85rem;
             margin-top: 0.15rem;
         }
+    }
+}
+
+.useful-links-category {
+    color: $primary;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    border-bottom: 2px solid rgba($primary, 0.2);
+    padding-bottom: 0.35rem;
+
+    &:first-child {
+        margin-top: 0 !important;
     }
 }
 
