@@ -25,6 +25,17 @@
         "discussions": "https://github.com/OS4CSAPI/os4csapi-meta/discussions",
         "csapiSpecRepo": "https://github.com/opengeospatial/ogcapi-connected-systems"
     },
+    "usefulLinks": [
+        { "name": "OS4CSAPI website", "url": "https://os4csapi.github.io/ogc-csapi-website/", "note": "Sister site — overview of CSAPI and the open-source ecosystem." },
+        { "name": "OS4CSAPI on GitHub", "url": "https://github.com/OS4CSAPI", "note": "Org hosting the OS4CSAPI repos and Discussions." },
+        { "name": "CSAPI standard repo", "url": "https://github.com/opengeospatial/ogcapi-connected-systems", "note": "Authoritative spec source, issues, and discussions." },
+        { "name": "OGC API – Connected Systems Part 1 (Feature Resources)", "url": "https://docs.ogc.org/is/23-001r1/23-001r1.html", "note": "Published Implementation Standard." },
+        { "name": "OGC API – Connected Systems Part 2 (Dynamic Data)", "url": "https://docs.ogc.org/is/23-002r0/23-002r0.html", "note": "Published Implementation Standard." },
+        { "name": "OGC CSAPI standard page", "url": "https://www.ogc.org/standard/ogcapi-connectedsystems/", "note": "OGC's official page for the standard." },
+        { "name": "OGC API family", "url": "https://ogcapi.ogc.org/", "note": "Cross-standard landing page for the OGC API suite." },
+        { "name": "OS4CSAPI Discussions", "url": "https://github.com/OS4CSAPI/os4csapi-meta/discussions", "note": "Open forum for the OS4CSAPI effort." },
+        { "name": "Sprint issue #181", "url": "https://github.com/opengeospatial/developer-events/issues/181", "note": "OGC's call for CSAPI participation at Builder Days." }
+    ],
     "timeZones": [
         { "label": "London, UK (event)", "iana": "Europe/London" },
         { "label": "Brussels / Paris", "iana": "Europe/Paris" },

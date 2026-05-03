@@ -49,7 +49,8 @@ html(lang='en')
                         li.nav-item: a.nav-link(href='#talks') Talks
                         li.nav-item: a.nav-link(href='#daily-reporting') Daily Reports
                         li.nav-item: a.nav-link(href='#implementations') Repos
-                        li.nav-item: a.nav-link(href='#logistics') Logistics
+                        li.nav-item: a.nav-link(href='#logistics') Quick Links
+                        li.nav-item: a.nav-link(href='#useful-links') CSAPI Links
 
         //- Masthead
         header.masthead
@@ -238,7 +239,7 @@ html(lang='en')
             .container
                 .text-center
                     h2.section-heading.text-uppercase Repositories of Interest
-                    h3.section-subheading.text-muted Open-source CSAPI server and client repos represented in the OS4CSAPI community.
+                    h3.section-subheading.text-muted Open-source CSAPI server and client repos of interest to the OS4CSAPI effort.
                 .row.g-4.justify-content-center
                     .col-md-5
                         .card.h-100.shadow-sm
@@ -269,11 +270,11 @@ html(lang='en')
                                                 a.impl-handle(href=impl.orgUrl, target='_blank', rel='noopener')= '@' + impl.org
                                             span.impl-people= impl.people
 
-        //- Logistics (incl. liaison)
+        //- Quick Participation Links (formerly Logistics)
         section.page-section#logistics
             .container
                 .text-center
-                    h2.section-heading.text-uppercase Logistics
+                    h2.section-heading.text-uppercase Quick Participation Links
                     h3.section-subheading.text-muted Venue, links, and the practical details.
                 .row.justify-content-center
                     .col-lg-9
@@ -312,8 +313,23 @@ html(lang='en')
                             dd.col-sm-9
                                 a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
 
+        //- Useful CSAPI Links
+        section.page-section.bg-light#useful-links
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Useful CSAPI Links
+                    h3.section-subheading.text-muted Specs, sister sites, and reference material for getting up to speed on CSAPI.
+                .row.justify-content-center
+                    .col-lg-9
+                        ul.useful-links-list
+                            each link in event.usefulLinks
+                                li
+                                    a(href=link.url, target='_blank', rel='noopener')= link.name
+                                    if link.note
+                                        span.useful-link-note= link.note
+
         //- About OS4CSAPI / Why this page
-        section.page-section.bg-light#about
+        section.page-section#about
             .container
                 .text-center
                     h2.section-heading.text-uppercase About OS4CSAPI

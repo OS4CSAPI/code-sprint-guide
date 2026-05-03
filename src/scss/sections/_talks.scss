@@ -151,6 +151,31 @@
     }
 }
 
+.useful-links-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            font-weight: 600;
+        }
+
+        .useful-link-note {
+            display: block;
+            color: $text-muted;
+            font-size: 0.9rem;
+            margin-top: 0.15rem;
+        }
+    }
+}
+
 .goals-list {
     list-style: none;
     counter-reset: goal;
