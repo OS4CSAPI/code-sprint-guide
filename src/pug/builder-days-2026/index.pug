@@ -36,7 +36,7 @@ html(lang='en')
         //- Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand(href='#page-top') OS4CSAPI · Sprint Guide
+                a.navbar-brand(href='#page-top') OS4CSAPI Sprint Participation Guide
                 button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars.ms-1
@@ -57,6 +57,8 @@ html(lang='en')
                 .masthead-subheading= event.subtitle
                 p.masthead-meta.mb-3
                     | #{new Date(event.startDateTimeISO).toUTCString().slice(0,16)} – #{new Date(event.endDateTimeISO).toUTCString().slice(0,16)} · #{event.eventTimeZoneLabel}
+                    br
+                    a.masthead-venue-link(href='#logistics') Participation Quick Links
                     br
                     a.masthead-venue-link(href=event.venue.mapsUrl, target='_blank', rel='noopener')= `${event.venue.name} — ${event.venue.address}`
                 a.btn.btn-primary.btn-xl.text-uppercase.me-2(href='#talks') See our talks
