@@ -64,25 +64,6 @@ html(lang='en')
                     a.masthead-venue-link(href=event.venue.mapsUrl, target='_blank', rel='noopener')= `${event.venue.name} — ${event.venue.address}`
                 a.btn.btn-primary.btn-xl.text-uppercase.me-2(href='#talks') See our talks
                 a.btn.btn-dark.btn-xl.text-uppercase(href=event.links.register, target='_blank', rel='noopener') Register
-                .row.justify-content-center.mt-5
-                    .col-lg-9
-                        .alert.alert-info.mb-3.text-center.disclaimer-alert(role='note')
-                            i.fas.fa-info-circle.me-2
-                            | This is a community-maintained OS4CSAPI companion guide for participants working on OGC API – Connected Systems topics during the sprint. For official event registration, agenda, and venue information, use the
-                            |  
-                            a(href=event.links.register, target='_blank', rel='noopener') OGC event page
-                            |  and 
-                            a(href=event.links.wiki, target='_blank', rel='noopener') sprint wiki
-                            | .
-                        .alert.alert-info.mb-0.text-center.disclaimer-alert(role='note')
-                            i.fas.fa-comment-dots.me-2
-                            | Comments, questions, or suggestions about this site? Open an issue on 
-                            a(href='https://github.com/OS4CSAPI/code-sprint-guide/issues', target='_blank', rel='noopener') the repo
-                            | , drop a note in 
-                            a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
-                            | , or email 
-                            a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
-                            | .
 
         //- Live dashboard (countdown / calendar / time zones)
         include ../includes/dashboard
@@ -350,6 +331,23 @@ html(lang='en')
                                     |  on GitHub, or 
                                     a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
                                     | ) and an invitation will go out.
+                        .alert.alert-info.mt-4.mb-3.text-center.disclaimer-alert(role='note')
+                            i.fas.fa-info-circle.me-2
+                            | This is a community-maintained OS4CSAPI companion guide for participants working on OGC API – Connected Systems topics during the sprint. For official event registration, agenda, and venue information, use the
+                            |  
+                            a(href=event.links.register, target='_blank', rel='noopener') OGC event page
+                            |  and 
+                            a(href=event.links.wiki, target='_blank', rel='noopener') sprint wiki
+                            | .
+                        .alert.alert-info.mb-0.text-center.disclaimer-alert(role='note')
+                            i.fas.fa-comment-dots.me-2
+                            | Comments, questions, or suggestions about this site? Open an issue on 
+                            a(href='https://github.com/OS4CSAPI/code-sprint-guide/issues', target='_blank', rel='noopener') the repo
+                            | , drop a note in 
+                            a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
+                            | , or email 
+                            a(href='mailto:sbolling@riversideresearch.org') sbolling@riversideresearch.org
+                            | .
 
         //- Footer
         footer.footer.py-4
