@@ -163,3 +163,79 @@
     window.addEventListener('DOMContentLoaded', navbarShrink);
     document.addEventListener('scroll', navbarShrink, { passive: true });
 })();
+
+// Active-section highlight in the top nav as the user scrolls.
+// Plain JS — no Bootstrap ScrollSpy — so native anchor jumps continue to
+// work and respect `html { scroll-padding-top }` from _global.scss.
+(function () {
+    'use strict';
+    window.addEventListener('DOMContentLoaded', function () {
+        var nav = document.getElementById('mainNav');
+        if (!nav) return;
+        var links = Array.prototype.slice.call(
+            nav.querySelectorAll('a.nav-link[href^="#"]')
+        );
+        if (!links.length) return;
+
+        // Map of section id -> nav link
+        var linkById = {};
+        var sections = [];
+        links.forEach(function (a) {
+            var id = a.getAttribute('href').slice(1);
+            if (!id) return;
+            var el = document.getElementById(id);
+            if (!el) return;
+            linkById[id] = a;
+            sections.push(el);
+        });
+        if (!sections.length) return;
+
+        function setActive(id) {
+            links.forEach(function (a) {
+                if (a.getAttribute('href') === '#' + id) {
+                    a.classList.add('active');
+                } else {
+                    a.classList.remove('active');
+                }
+            });
+        }
+
+        function getNavOffset() {
+            // Navbar height + a small slack so a section "becomes active"
+            // shortly before its heading slides under the navbar.
+            var navEl = document.getElementById('mainNav');
+            return (navEl ? navEl.offsetHeight : 72) + 8;
+        }
+
+        function onScroll() {
+            var offset = getNavOffset();
+            var scrollY = window.scrollY || window.pageYOffset;
+            var nearBottom =
+                window.innerHeight + scrollY >=
+                document.documentElement.scrollHeight - 2;
+
+            // If the user has scrolled to the bottom, force the last section
+            // active — otherwise short trailing sections never highlight.
+            if (nearBottom) {
+                setActive(sections[sections.length - 1].id);
+                return;
+            }
+
+            // Active = the last section whose top has crossed the nav line.
+            var activeId = sections[0].id;
+            for (var i = 0; i < sections.length; i++) {
+                var top = sections[i].getBoundingClientRect().top;
+                if (top - offset <= 0) {
+                    activeId = sections[i].id;
+                } else {
+                    break;
+                }
+            }
+            setActive(activeId);
+        }
+
+        document.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        onScroll();
+    });
+})();
