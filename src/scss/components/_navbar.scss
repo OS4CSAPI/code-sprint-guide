@@ -38,18 +38,22 @@
                 position: relative;
                 transition: color 0.15s ease;
 
-                &.active,
                 &:hover {
                     color: $primary;
+                }
+
+                &.active {
+                    color: $primary !important;
+                    font-weight: $font-weight-bold;
                 }
 
                 &.active::after {
                     content: '';
                     position: absolute;
-                    left: 0.75rem;
-                    right: 0.75rem;
-                    bottom: 0.25rem;
-                    height: 2px;
+                    left: 0.5rem;
+                    right: 0.5rem;
+                    bottom: 0.1rem;
+                    height: 3px;
                     background: $primary;
                     border-radius: 2px;
                 }
