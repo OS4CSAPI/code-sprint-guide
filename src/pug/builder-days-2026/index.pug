@@ -87,7 +87,7 @@ html(lang='en')
                     h2.section-heading.text-uppercase How to Participate
                     h3.section-subheading.text-muted Choose what works for you. Hybrid is fully supported.
                 .row.g-4
-                    .col-md-4
+                    .col-md-6.col-lg-3
                         .text-center
                             span.fa-stack.fa-3x
                                 i.fas.fa-circle.fa-stack-2x.text-primary
@@ -101,7 +101,17 @@ html(lang='en')
                                 |  (or the 
                                 a(href=event.links.matrix, target='_blank', rel='noopener') Matrix bridge
                                 | ).
-                    .col-md-4
+                    .col-md-6.col-lg-3
+                        .text-center
+                            span.fa-stack.fa-3x
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fas.fa-bullseye.fa-stack-1x.fa-inverse
+                            h4.my-3 Review our Sprint Goals
+                            p.text-muted
+                                | Skim the 
+                                a(href='#goals') Sprint Goals
+                                |  to see what OS4CSAPI participants intend to tackle. Pick a thread that overlaps your interests, or bring your own — anything CSAPI-adjacent is welcome.
+                    .col-md-6.col-lg-3
                         .text-center
                             span.fa-stack.fa-3x
                                 i.fas.fa-circle.fa-stack-2x.text-primary
@@ -111,7 +121,7 @@ html(lang='en')
                                 | Comment on 
                                 a(href=event.links.issue181, target='_blank', rel='noopener') developer-events #181
                                 |  — OGC's public "what is everybody working on" thread. CSAPI is currently underrepresented there.
-                    .col-md-4
+                    .col-md-6.col-lg-3
                         .text-center
                             span.fa-stack.fa-3x
                                 i.fas.fa-circle.fa-stack-2x.text-primary
@@ -121,6 +131,8 @@ html(lang='en')
                                 | Share what you got done each day in the 
                                 a(href=event.links.discussions, target='_blank', rel='noopener') OS4CSAPI Discussions
                                 |  space — gets aggregated into the daily brief-backs.
+                            p.text-muted.small.mb-0
+                                | Prefer not to post yourself? Send your update to Sam by any channel and he'll liaise it into Discussions on your behalf, with attribution.
 
         //- Issue #181 detail
         section.page-section#issue-181
