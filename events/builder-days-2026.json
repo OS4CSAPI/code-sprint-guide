@@ -114,6 +114,19 @@
         "Resolve active, open GitHub issues on the official OGC CSAPI standard.",
         "Add open-source data-source transformers, ETLs, publishers, data simulators, and sample data."
     ],
+    "csapiIssue181Posts": [
+        {
+            "handle": "ricardogsilva",
+            "name": "Ricardo Garcia Silva",
+            "project": "OACS QGIS plugin",
+            "repoUrl": "https://github.com/byteroad/qgis-oacs-plugin",
+            "commentUrl": "https://github.com/opengeospatial/developer-events/issues/181#issuecomment-4371546268",
+            "summary": "QGIS plugin that brings OGC API \u2013 Connected Systems data into QGIS as a client.",
+            "topics": ["client", "QGIS"],
+            "postedAt": "2026-05-04",
+            "postedOnBehalfOf": true
+        }
+    ],
     "implementations": {
         "servers": [
             {

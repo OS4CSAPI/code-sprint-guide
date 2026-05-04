@@ -1,0 +1,147 @@
+//
+// Issue #181 — participant post cards
+//
+
+.issue181-posts-header {
+    .letterspaced {
+        letter-spacing: 0.08em;
+    }
+
+    h4 {
+        font-family: $headings-font-family;
+        font-weight: $font-weight-bold;
+        color: $gray-900;
+    }
+}
+
+.issue181-post-card {
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: transparent;
+        border-radius: 6px 0 0 6px;
+        transition: background 0.15s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: rgba($primary, 0.55);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        transform: translateY(-1px);
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+
+        &::before {
+            background: $primary;
+        }
+
+        .issue181-post-cta {
+            color: $primary;
+        }
+    }
+}
+
+.issue181-post-avatar {
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    flex-shrink: 0;
+    background: $gray-100;
+}
+
+.issue181-post-handle {
+    font-family: $headings-font-family;
+    font-size: 0.95rem;
+    font-weight: $font-weight-bold;
+    color: $gray-900;
+    letter-spacing: 0.02em;
+    word-break: break-all;
+}
+
+.issue181-post-relay {
+    font-family: $headings-font-family;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $gray-700;
+    background: $gray-200;
+    padding: 0.1rem 0.45rem;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.issue181-post-project {
+    font-family: $headings-font-family;
+    font-size: 0.95rem;
+    font-weight: $font-weight-bold;
+    color: $gray-900;
+    line-height: 1.3;
+}
+
+.issue181-post-summary {
+    font-size: 0.88rem;
+    color: $gray-700;
+    line-height: 1.45;
+}
+
+.issue181-post-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.issue181-post-chip {
+    display: inline-block;
+    font-family: $headings-font-family;
+    font-size: 0.65rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $gray-900;
+    background: rgba($primary, 0.18);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+}
+
+.issue181-post-meta {
+    font-size: 0.75rem;
+    color: $text-muted;
+    border-top: 1px dashed $border-color;
+    padding-top: 0.5rem;
+    margin-top: 0.25rem;
+    gap: 0.75rem;
+}
+
+.issue181-post-repo {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.72rem;
+    color: $gray-700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.issue181-post-cta {
+    font-family: $headings-font-family;
+    font-size: 0.7rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $gray-700;
+    flex-shrink: 0;
+    transition: color 0.15s ease;
+}

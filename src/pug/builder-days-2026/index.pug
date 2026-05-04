@@ -173,7 +173,7 @@ html(lang='en')
             .container
                 .text-center
                     h2.section-heading.text-uppercase About Issue #181
-                    h3.section-subheading.text-muted The "what is everybody working on" thread.
+                    h3.section-subheading.text-muted The "what is everybody working on" thread — and who's already on it.
                 .row.justify-content-center
                     .col-lg-9
                         p
@@ -185,6 +185,10 @@ html(lang='en')
                                 p.text-muted.small.mb-2.text-uppercase Suggested template — adapt freely
                                 p.fst-italic.mb-0
                                     | I will be working on [project / repo] during the May 2026 sprint as part of the OS4CSAPI community. My focus is [Pub/Sub, Binary, conformance tests, ETL, sample data, server, client, docs — pick what fits]. If anyone is interested in [collaborating on / testing / reviewing] this, please reach out on Discord or in the OS4CSAPI Discussions space.
+
+                if event.csapiIssue181Posts && event.csapiIssue181Posts.length
+                    include ../includes/issue181-posts
+                    +issue181Posts(event)
 
         //- Daily participation reporting
         section.page-section#daily-reporting

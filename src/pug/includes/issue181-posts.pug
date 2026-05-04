@@ -1,0 +1,44 @@
+mixin issue181Posts(event)
+    - var posts = event.csapiIssue181Posts || []
+    .row.justify-content-center.mt-5
+        .col-lg-10
+            .issue181-posts-header.text-center.mb-4
+                p.text-uppercase.text-muted.small.mb-1.fw-bold.letterspaced Posts already up
+                h4.mb-2 #{posts.length} #{posts.length === 1 ? 'CSAPI participant has' : 'CSAPI participants have'} posted on issue #181
+                p.text-muted.mb-0 See how others framed theirs — then add your own (or send it to Sam to post for you).
+            .row.g-3
+                each post in posts
+                    .col-md-6
+                        a.issue181-post-card.h-100.d-block(href=post.commentUrl, target='_blank', rel='noopener', aria-label=`View ${post.handle}'s post on issue #181`)
+                            .d-flex.align-items-start.gap-3
+                                img.issue181-post-avatar(
+                                    src=`https://github.com/${post.handle}.png?size=80`,
+                                    alt=`${post.handle} avatar`,
+                                    width='48',
+                                    height='48',
+                                    loading='lazy'
+                                )
+                                .flex-grow-1.min-w-0
+                                    .d-flex.justify-content-between.align-items-baseline.gap-2.mb-1
+                                        span.issue181-post-handle @#{post.handle}
+                                        if post.postedOnBehalfOf
+                                            span.issue181-post-relay(title='Posted on this participant\'s behalf via Sam') relayed
+                                    .issue181-post-project.mb-1= post.project
+                                    p.issue181-post-summary.mb-2= post.summary
+                                    if post.topics && post.topics.length
+                                        .issue181-post-topics.mb-2
+                                            each topic in post.topics
+                                                span.issue181-post-chip= topic
+                                    .issue181-post-meta.d-flex.justify-content-between.align-items-center
+                                        if post.repoUrl
+                                            span.issue181-post-repo
+                                                i.fas.fa-code-branch.me-1
+                                                = post.repoUrl.replace(/^https?:\/\/github\.com\//, '')
+                                        span.issue181-post-cta
+                                            | View on #181
+                                            i.fas.fa-arrow-right.ms-1
+            .text-center.mt-4
+                p.text-muted.small.mb-0
+                    | Posting on someone's behalf? Add an entry by 
+                    a(href='https://github.com/OS4CSAPI/code-sprint-guide/issues', target='_blank', rel='noopener') opening a quick issue
+                    |  on the guide repo, or just send it to Sam.
