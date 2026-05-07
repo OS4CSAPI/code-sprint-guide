@@ -125,6 +125,17 @@
             "topics": ["client", "QGIS"],
             "postedAt": "2026-05-04",
             "postedOnBehalfOf": true
+        },
+        {
+            "handle": "Sam-Bolling",
+            "name": "Sam Bolling",
+            "project": "OSHConnect-Python (OS4CSAPI fork)",
+            "repoUrl": "https://github.com/OS4CSAPI/OSHConnect-Python",
+            "commentUrl": "https://github.com/opengeospatial/developer-events/issues/181#issuecomment-4393511033",
+            "summary": "A fleet of publishers that ingest public live data sources, map them to CSAPI, and publish to a CSAPI server \u2014 evolving rapid ingest tooling into a reusable open-source CSAPI publishing capability (fork of GeoRobotix's OSH Python client).",
+            "topics": ["client", "publisher", "ETL", "sample data", "Python"],
+            "postedAt": "2026-05-06",
+            "postedOnBehalfOf": false
         }
     ],
     "implementations": {
