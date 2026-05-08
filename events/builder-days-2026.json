@@ -271,6 +271,14 @@
             {
                 "name": "OCSASim",
                 "url": "https://github.com/tipatterson-dev/OCSASim",
+                "description": "Synthetic-sensor data simulator that publishes observations into an OpenSensorHub node via the oshconnect Python library; ships with built-in sims (counter, line-of-bearing) and a Dockerized OSH+sim stack",
+                "people": [
+                    { "handle": "tipatterson-dev", "url": "https://github.com/tipatterson-dev" }
+                ]
+            },
+            {
+                "name": "OCSASim",
+                "url": "https://github.com/tipatterson-dev/OCSASim",
                 "description": "OGC CSAPI data simulator",
                 "people": [
                     { "handle": "tipatterson-dev", "url": "https://github.com/tipatterson-dev" }
