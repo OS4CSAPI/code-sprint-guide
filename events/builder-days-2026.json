@@ -260,8 +260,8 @@
         ],
         "tools": [
             {
-                "name": "csapi_compliance",
-                "url": "https://github.com/Botts-Innovative-Research/csapi_compliance",
+                "name": "ets-ogcapi-connectedsystems10",
+                "url": "https://github.com/Botts-Innovative-Research/ets-ogcapi-connectedsystems10",
                 "description": "CSAPI conformance test suite (Botts Innovative Research)",
                 "people": [
                     { "handle": "drewbotts", "url": "https://github.com/drewbotts" },
