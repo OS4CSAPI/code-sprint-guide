@@ -136,6 +136,17 @@
             "topics": ["client", "publisher", "ETL", "sample data", "Python"],
             "postedAt": "2026-05-06",
             "postedOnBehalfOf": false
+        },
+        {
+            "handle": "cam-s-hunt",
+            "name": "Cameron S. Hunt",
+            "project": "ets-ogcapi-connectedsystems10",
+            "repoUrl": "https://github.com/Botts-Innovative-Research/ets-ogcapi-connectedsystems10",
+            "commentUrl": "https://github.com/opengeospatial/developer-events/issues/181#issuecomment-4409234895",
+            "summary": "Continuing work on a Connected Systems API Executable Test Suite (ETS) for the OGC TEAM Engine validator \u2014 standing up automated conformance testing for CSAPI implementations.",
+            "topics": ["conformance", "test suite", "ETS", "TEAM Engine", "validator"],
+            "postedAt": "2026-05-08",
+            "postedOnBehalfOf": false
         }
     ],
     "implementations": {
