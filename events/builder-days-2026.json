@@ -147,6 +147,17 @@
             "topics": ["conformance", "test suite", "ETS", "TEAM Engine", "validator"],
             "postedAt": "2026-05-08",
             "postedOnBehalfOf": false
+        },
+        {
+            "handle": "nsnarayanam",
+            "name": "Narasimha Sharma Narayanam",
+            "project": "ogc-csapi-agent",
+            "repoUrl": "https://github.com/nsnarayanam/ogc-csapi-agent",
+            "commentUrl": "https://github.com/opengeospatial/developer-events/issues/181#issuecomment-4412880043",
+            "summary": "Python ADK agent (Google Gemini) that drives the @camptocamp/ogc-client CSAPI client via a Node CLI subprocess to query CSAPI endpoints from natural language \u2014 a second consumer of the client library that has already surfaced real-world interop fixes.",
+            "topics": ["client", "agent", "natural language", "Python", "Gemini", "ADK"],
+            "postedAt": "2026-05-09",
+            "postedOnBehalfOf": true
         }
     ],
     "implementations": {
